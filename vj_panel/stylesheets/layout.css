@@ -1,0 +1,185 @@
+/************************************************
+
+FILE:		  	layout.css
+DESCRIPTION:  	file defines base structure - The layout of the site
+
+************************************************/
+
+.container			{display:block; width:934px; position:relative;}
+
+/* Sprite 01 - 8 Bit PNG [INTERFACE] */
+	.spr-01,
+	#logo,
+	nav#main,
+	nav#main a span,
+	nav#main a i,
+	nav#toolbar,
+	#copyright,
+	.frm-srch .text,
+	.frm-srch button,
+	.outer-top,
+	.outer-bottom,
+	.inner-top,
+	.inner-bottom,
+	.inner-top .right,
+	.outer-top .right,
+	.inner-bottom .right,
+	.outer-bottom .right,
+	.frm-flex div.top,
+	.frm-flex div.top .right,
+	.frm-flex div.bottom,
+	.frm-flex div.bottom .right,
+	.tabbed-box,
+	ul.nav-tabbed li a,
+	ul.nav-tabbed li a i,
+	.tabbed-box .right,
+	.help .help-top,
+	.help .help-top .help-R,
+	.help .help-bottom .help-R,
+	.help .help-bottom,
+	.frm-srch-content .text,
+	.frm-srch-content .btn,
+	.channel .top,
+	.channel .top .tr,
+	.channel .bottom .br,
+	.channel .bottom,
+	.upload-msg	.top,
+	.upload-msg	.top .tr,
+	.upload-msg	.bottom,
+	.upload-msg	.bottom .br,
+	.upload-msg .content .icon,
+	.campaign-rules-list li .top,	
+	.campaign-rules-list li .top .right,
+	.campaign-rules-list li .bottom,
+	.campaign-rules-list li .bottom .right			{background: url(../images/sprites/spr_01_interface_8.png);}
+	
+/* Sprite 02 - 8 bit PNG [ICONS] */
+	.spr-02,
+	footer li,
+	div.message li,
+	dd.has-msg .tool-tip-icon,
+	dd.has-error .tool-tip-icon,
+	.frm-flex fieldset.open legend a,
+	.frm-flex fieldset.closed legend a,
+	.item-edit,
+	.item-delete,
+	.item-up,
+	.item-down,
+	label.with-selected,
+	a.order,
+	a.movie-clip,
+	a.remove,
+	a.links								{background: url(../images/sprites/spr_02_icons_8.png) no-repeat;}
+	
+/* Sprite 03 - 24 bit PNG [INTERFACE] */
+	.spr-03,
+	.btn span,
+	.btn i,
+	.ul-select li .t,
+	.ul-select li .tr,
+	.ul-select li .select-content,
+	.ul-select li ul, 
+	.ul-select li .b,
+	.ul-select li .b .br,
+	.tool-tip-msg .t,
+	.tool-tip-msg .b,
+	.tool-tip-content		{background: url(../images/sprites/spr_03_interface_24.png) no-repeat;}
+
+/* Header */
+header						{display:block; height:32px; padding:16px; background:#2e2e2e;}
+	#logo					{display:block; width:214px; height:24px; overflow:hidden; text-indent:-999px; background-position:0 0;}
+	nav#head				{position:absolute; top:-4px; right:0;}
+	
+/*Main NAV */
+	nav#main				{display:block; height:26px; padding:0 15px; font-size:93%; background-position:0 -389px; border-bottom: 1px solid #d4d4d4;}
+	nav#main a 				{float:left; height:26px; margin-right:1px; line-height:26px; color:#373737; font-weight:bold; border:none;}
+	nav#main a span			{float:left; height:26px; padding-left:12px; background-position:-600px -30px;}
+	nav#main a i			{float:left; height:26px; width:11px;  background-position:right -30px;}
+	
+	nav#main a.active		{color:#282727;}
+	nav#main a.active span	{height:27px; background-position:left -30px;}
+	nav#main a.active i		{height:27px; background-position:-570px -30px;}
+	
+/* Toolbar Nav */
+	nav#toolbar						{display:block; height:20px; padding:8px 16px; border-bottom:1px solid #7e7e7e; background-position:0 -61px;}
+	nav#toolbar	.btn				{float:left; margin-right:4px;}
+	nav#toolbar .bar-L,
+	nav#toolbar .bar-M,
+	nav#toolbar .bar-selected-L,
+	nav#toolbar .bar-selected-M		{margin:0;}
+	
+	nav#toolbar .ul-select ul		{width:200px;}
+	nav#toolbar .ul-select li		{float:left; padding:0; margin:0;}
+	nav#toolbar .ul-select li li	{float:none;}
+	nav#toolbar .ul-select li li a	{float:none;}
+	
+/* Sub Nav */
+	nav.sub					{display: block; margin:0 0 10px 0; border-top:1px solid #dedede; font-size:93%;}
+	
+	nav.sub a,
+	nav.sub a:link,
+	nav.sub a:visited		{display: block; padding:7px 10px 8px 10px; border-bottom:1px solid #dedede;}
+	nav.sub a:hover			{background:#eaeaea;}
+	nav.sub a:active		{}
+	
+	nav.sub a.active,
+	nav.sub a.active:link,
+	nav.sub a.active:visited,
+	nav.sub a.active:hover,
+	nav.sub a.active:active	{background:#eaeaea; cursor:default;}
+	
+/* Template Area */
+	#template				{display:block; padding: 32px 16px 64px 16px; clear:both; background:#fff;}
+	
+	section#content			{float:left; display:block;}
+	aside					{float:left; display:block;}		
+	
+	/* Default (When no class is applied to the body tag) */
+		section#content		{float:left; width:668px;}
+		aside				{float:right; width:250px;}
+		
+	/* Aside Right (same as default)*/
+		.aside-R section#content	{float:left; width:668px;}
+		.aside-R aside				{float:right; width:250px;}
+		
+	/* Aside on the Left side */
+		.aside-L section#content	{float:right; width:668px;}
+		.aside-L aside				{float:left; width:250px;}
+		
+	/* No Aside */
+		.aside-N section#content	{width:100%;}
+		.aside-N aside				{display:none;}
+		
+	/* Blank (without header, footer etc. eg: Login Page) */		
+		.blank #template			{display: block; width: 100%; text-align: center; padding: 0; background:none;}
+		.blank .container			{width:auto;}
+		.blank header,
+		.blank nav,
+		.blank footer				{display:none;}
+			
+	
+
+
+/* Footer */
+footer					{display:block; }
+
+	#copyright			{height:20px; line-height:20px; padding: 0 16px; border-top:1px solid #d4d4d4; border-bottom:1px solid #7e7e7e; background-position:0 -159px;}
+	#copyright small	{font-size:77%; color:#7e7e7e; position:absolute; right:0;}
+	
+	footer section		{float:left; width:284px; padding:16px 0 16px 16px;}
+	footer section h1	{color:#fff; font-weight:bold; font-size:93%; padding: 0 0 5px 0; margin:0;}
+	footer section p	{padding:0 0 22px 0; font-size:93%; color:#9c9c9c;}
+	footer section ul	{margin:0; padding:0;}
+	footer section li	{padding:0 0 6px 15px; margin:0; list-style-type:none; background-position:0 6px;}	
+	footer section a,
+	footer section a:link,
+	footer section a:visited	{color:#e3e3e3; font-size:93%;}
+	footer section a:hover,
+	footer section a:focus		{color:#fff;}
+	footer section a:ative		{color:#e3e3e3;}
+	
+	footer .frm-srch 					{margin:0; padding:2px 0 20px 0;}
+	footer .frm-srch fieldset			{margin:0; padding:0;}
+	footer .frm-srch .text			{height:12px; width:190px; padding:4px 7px;  float:left; border:0; font-size:77%; background-position:0 -359px;}
+	footer .frm-srch button				{width:25px; height:20px; padding:0; margin:0; float:left; overflow:hidden; text-indent:-999px; border:none; outline:none; background-position:-205px -359px;}
+	

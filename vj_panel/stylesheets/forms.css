@@ -1,0 +1,320 @@
+/************************************************
+
+FILE:		  	forms.css
+DESCRIPTION:  	Styles for forms
+
+************************************************/
+
+/* @group 1. Generic Elements */
+	form dd small,
+	form dt small		{font-size:77%;}
+
+	/* Very Reusble Elements that need classes */
+		.radio,				
+		.checkbox .checkbox		{margin:0 15px 4px 0;}
+		.checkbox				{font-size:93%; color:#6e6e6e; line-height:18px;}
+		.select					{}
+		.actions				{clear:left;}
+		
+	/* Textfield & Textarea */		
+		.text,
+		textarea			{background:#eaeaea; border:1px solid #aaa; padding:2px 4px 2px 4px; font-family:Tahoma, Arial; font-size:93%; color:#6e6e6e;}
+		.text			{height:16px;}
+		.text:focus,
+		textarea:focus		{background-color:#f7f7f7; border-color:#808080;}
+		
+		/* Disabled versions */
+		.text[disabled="disabled"],
+		textarea[disabled="disabled"],
+		.text-disabled,
+		textarea-disabled					{background:#f4f4f4; border:1px solid #d4d4d4; color:#6e6e6e;}
+	
+		
+	/* Minimal forms (forms that hide elements that are usually there for accessibility) */
+		.frm-minimal legend,
+		.frm-minimal label		{display:none;}
+	
+		
+	/* Form Tooltips */
+		/* Message & Error Tooltip Styles */
+			dd .tool-tip-icon				{display:none;}	
+			dd.has-msg,						
+			dd.has-error					{position:relative;}
+			dd.has-msg .tool-tip-icon,
+			dd.has-error .tool-tip-icon		{display:block; width:14px; height:14px; position:absolute; right:2px; top:4px; background-position:right -400px; border-bottom:none;}
+			
+			a.tool-tip-icon,
+			a.tool-tip-icon:link,
+			a.tool-tip-icon:visited,
+			a.tool-tip-icon:hover,
+			a.tool-tip-icon:focus,
+			a.tool-tip-icon:active
+		
+		/* Error Tooltip Styles */
+			dt.has-error					{color:#790200;}
+			dd.has-error .tool-tip-icon		{background-position:right -500px;}		
+			dd.has-error .text,
+			dd.has-error textarea			{border-color:#790200; background:#ebd9d9;}
+			dd.has-error .text:focus,
+			dd.has-error textarea:focus	{background:#F0DEDE; border-color:#4E0100;}
+			
+		/* Message Box */
+			.tool-tip-container				{position:relative;}
+			.tool-tip-msg					{position:absolute; bottom:0; right:-43px;}
+			.tool-tip-msg .t				{background-position:0 -140px;}
+			.tool-tip-content				{background-position:0 -144px;}
+			.tool-tip-msg .b				{background-position:0 -386px;}
+			
+			.tool-tip-msg .t				{display:block; height:4px;}
+			.tool-tip-msg .b				{display:block; height:14px;}
+			
+			.tool-tip-content				{display:block; width:351px; padding:6px 12px; font-size:85%; color:#9c9c9c; line-height:18px;}
+			.tool-tip-content strong		{color:#fff; font-weight:normal;}
+			
+			
+			/* Shown & Hidden Styles */
+				dd .tool-tip-msg						{display:none;}
+				dd.has-msg .tool-tip-msg,
+				dd.has-error .tool-tip-msg				{display:block; }
+				.has-js dd.has-msg .tool-tip-msg,
+				.has-js dd.has-error .tool-tip-msg		{display:none;}
+				.has-js dd.msg-clicked .tool-tip-msg	{display:block;}
+
+			
+			
+			
+		
+		
+		
+		
+		
+/* @group 2. Reusable Elements */	
+
+	
+		
+	/* Flexible forms - Felxible Forms with curved corner fieldsets */	
+		.frm-flex								{margin-top:-10px;}
+		
+			/* Outer Elements (decoration)*/
+				.frm-flex fieldset,
+				.fieldset						{margin-bottom:16px;}
+				.frm-flex legend a,
+				.frm-flex legend a:link,
+				.frm-flex legend a:visited,
+				.frm-flex legend a:focus,
+				.frm-flex legend a:active	{position:relative; bottom:-12px; margin:0 9px; padding:0 7px; color:#808080; font-weight:bold; background-color:#fff; border-bottom:none;}
+				
+				.frm-flex .legend			{position:relative; top:-12px; margin:0 9px; padding:0 7px; color:#808080; font-weight:bold; background-color:#fff; border-bottom:none;}
+				
+				.frm-flex .legend a,
+				.frm-flex .legend a:link,
+				.frm-flex .legend a:visited,
+				.frm-flex .legend a:focus,
+				.frm-flex .legend a:active	{color:#808080; font-weight:bold; background-color:#fff; border-bottom:none;}
+				
+				.frm-flex div.top				{background-position: left -189px;}
+				.frm-flex div.top .right		{background-position: right -189px;}
+				.frm-flex div.bottom			{background-position: left -208px;}
+				.frm-flex div.bottom .right		{background-position: right -208px;}
+	
+				.frm-flex div.top				{height:10px; margin-right:10px; background-position: left -189px;}
+				.frm-flex div.top .right		{float:right; width:10px; height:10px; position:relative; top:0; right:-10px; margin:0;}
+	
+				.frm-flex div.frm-content		{border-left:1px solid #aaa; border-right:1px solid #aaa; padding:22px 16px;}
+				div.frm-flex div.frm-content	{position:relative; top:-16px;}
+	
+				.frm-flex div.bottom			{height:10px; margin-right:10px; clear:both;}	
+				div.frm-flex div.bottom			{position:relative; top:-16px;}
+				.frm-flex div.bottom .right		{float:right; display:block; width:10px; height:10px; position:relative; top:0; right:-10px; margin:0;}
+				
+			
+			/*Inner Elements (Content) */
+				.frm-flex dl					{padding:0; margin:0; width:100%;}
+				.frm-flex dt					{width:144px; padding:0 20px 0 16px; margin:0;}
+				.frm-flex dd					{width:362px; padding: 0 26px 14px 0; margin:0;}
+				.frm-flex dd .text			{width:352px;}
+				.frm-flex dd textarea			{width:352px;}
+				.frm-flex .actions				{padding-left: 160px;}				
+				.frm-flex dd.last,
+				.frm-flex dt.last				{padding-bottom:0;}
+				
+			/* Expandable Fieldsets (Styles all states just for ie6)*/
+				.frm-flex fieldset.open legend a,
+				.frm-flex fieldset.open legend a:link,
+				.frm-flex fieldset.open legend a:visited,
+				.frm-flex fieldset.open legend a:hover,
+				.frm-flex fieldset.open legend a:focus,
+				.frm-flex fieldset.open legend a:active		{background-color:#fff; padding-left:20px; background-position:7px -593px;}
+				
+				.frm-flex fieldset.closed legend a,
+				.frm-flex fieldset.closed legend a:link,
+				.frm-flex fieldset.closed legend a:visited,
+				.frm-flex fieldset.closed legend a:hover,
+				.frm-flex fieldset.closed legend a:focus,
+				.frm-flex fieldset.closed legend a:active	{background-color:#fff; padding-left:20px; background-position:9px -695px;}
+				
+				/* collapse the fieldset once we know the user has JS */
+					.has-js fieldset.closed .frm-content	{padding:0; height:6px;}
+					.has-js fieldset.closed .frm-content dl	{display:none;}
+				
+			/* Inside Tabbed Nav */
+				.frm-flex .tabbed-box dd				{width:340px;}
+				.frm-flex .tabbed-box dd .text,
+				.frm-flex .tabbed-box dd textarea		{width:330px;}
+				
+	
+	
+	
+	/* Upload Form (inherits from .frm-flex - basically a fake fieldset around the Tabbed Nav.  See )*/	
+		div.fake-fieldset						{padding-bottom:0; margin-top:0; position:relative; bottom:-6px;}
+		
+			div.fake-fieldset .tabbed-box		{margin-bottom:0;}
+			div.fake-fieldset .tabbed-content	{margin-bottom:0; padding-bottom:0;}
+	
+	
+	
+
+				
+	
+	
+	
+	/* Submit Forms */
+		.actions,
+		fieldset.actions 		{float:right; padding:0; clear:both; margin:0;}
+		.actions legend			{display:none;}
+		.actions .btn			{float:left; margin-left:4px;}
+				
+				
+	/* Content Actions - Alternative form wide actions at the bottom on the content area (Form Page) */
+		dl.content-actions			{float:right; margin:0; padding:10px 0 4px 0; position:relative; right:-4px;}
+		dl.content-actions dt		{width:auto; padding:0 7px 0 0; margin:0; height:20px; line-height:20px; color:#9b8f8f; font-size:85%;}
+		dl.content-actions dd		{float:right; width:auto; margin:0; padding:0;}
+		dl.content-actions dd ul	{margin:0; padding:0;}
+		dl.content-actions dd li	{float:left; margin:0; padding:0; list-style-type:none;}
+		dl.content-actions form,
+		dl.content-actions fieldset	{float:left; clear:none;}
+
+
+
+
+
+
+/* Specific Forms */
+
+	/* Login Form */
+		.frm-login					{width:418px; position: relative;}
+		.blank .frm-login			{margin:0 auto; top:100px;}
+		
+		.frm-login legend a,
+		.frm-login .content,
+		.frm-login .bottom,
+		.frm-login .vj				{background:url(../images/bg_content/bg-login.png) top left no-repeat;}
+		
+		.frm-login fieldset			{padding:0; text-align: left;}
+		.frm-login legend a,			
+		.frm-login legend a:link,
+		.frm-login legend a:visited,
+		.frm-login legend a:hover,
+		.frm-login legend a:active	{display:block; width: 386px; height: 34px; font-size: 108%; font-weight: bold; border-bottom: none; padding: 16px 16px 0 16px; background-positition:0 0;}
+	
+		.frm-login .secure			{width:26px; height:26px; position:absolute; right:12px; top:10px;}
+		.frm-login .content			{padding:0 16px 12px 16px; text-align: left; margin:0; border:none; background-position:0 -50px;}
+		.frm-login .bottom			{height:25px; background-position:0 -746px;}
+		.frm-login .vj				{display: block; position: absolute; bottom: -10px; right: 6px; width:100px; height:12px; overflow:hidden; text-indent:-9999px; border:none; background-position:-318px -770px;}
+
+		/* Login Form Content */		
+			.frm-login dl			{padding-top:12px; margin-bottom:3px;}
+			.frm-login dt			{width:96px; margin: 0; padding: 0 20px 12px 10px;}
+			.frm-login dd			{width:220px; margin: 0; padding:0 20px 12px 0;}
+			
+			.frm-login label		{color:#fff; font-size:93%;}
+			.frm-login .text	{width:208px;}
+			
+			.frm-login .actions		{padding-right:44px;}
+			
+		/* Messages inside the login form */
+			.frm-login div.message	{margin:0 8px 12px 8px; position:relative; bottom:-8px;}
+		
+	/* Search Textfield*/
+		.srch-dark-bg				{}
+		
+	/* Display by status - Order a list of stuff by its status (Top of list page) */
+		.frm-display-by-status		{float:left; padding-bottom:20px; width:auto;}
+		
+	/* List Items (A list of things)*/
+		.frm-list-items				{padding:0 0 16px 0;}
+		label.with-selected			{float:left; display:block; width:32px; height:20px; overflow:hidden; text-indent:-999px; background-position:16px -955px;}
+		
+	/* Search forms - Forms that are just for searching */
+		.frm-srch				{}
+		.frm-srch .text	{float:left; background-position:-600px -329px; border:none; font-size:85%;}
+		.frm-srch .btn			{float:left; border:none; outline:none; width:25px; height:20px; background-position:-1175px -329px;}
+		.frm-srch .btn span,
+		.frm-srch .btn i		{display:none;}	
+		
+		.frm-srch-content				{float:right; padding-bottom:20px;}
+		.frm-srch-content .text	{width:144px;}
+		
+	/* Upload Progress forms */
+		ul.upload-progress						{margin:0; padding:0;}
+		ul.upload-progress li					{list-style-type:none; padding:0; margin:0 16px 14px 16px; position:relative;}
+		
+		ul.upload-progress li .title			{float:left; font-size:93%; color:#2e2e2e; }
+		ul.upload-progress li .status			{float:right; font-size:85%; color:#b8b8b8;}
+		.upload-progress .progress-wrapper		{height:18px; width:100%; clear:both; margin:5px 0 0 0; background:#f4f4f4; padding:1px; border:1px solid #d4d4d4;}
+		.upload-progress .progress				{height:18px; text-align:right; background:#d4d4d4; overflow:hidden;}
+		.upload-progress .percentage			{padding-right:4px; color:#808080; font-size:85%;}
+		
+	
+	
+	
+	/* A list of campaign rules */
+		ul.campaign-rules-list							{margin:0; padding:26px 0;}
+		ul.campaign-rules-list li						{margin:0; padding:0; list-style:none;}
+		ul.campaign-rules-list div.top					{height: 5px; background-position:0 -256px;}
+		ul.campaign-rules-list div.top div.right		{height: 5px; background-position:right -256px;}
+		ul.campaign-rules-list div.bottom				{height: 5px; background-position:0 -266px;}
+		ul.campaign-rules-list div.bottom div.right		{height: 5px; background-position:right -266px;}
+
+		/* Now the content */
+			ul.campaign-rules-list dl				{background:#eaeaea;}
+			ul.campaign-rules-list dd				{width: 390px; margin:0; padding: 0;}
+			ul.campaign-rules-list li li			{margin:0 0 6px 0; padding:0;}
+			ul.campaign-rules-list ul				{margin:0; padding:0;}
+			
+			/* Now the actions */
+				ul.campaign-rules-list .actions			{margin:0;}
+				ul.campaign-rules-list .item-edit,
+				ul.campaign-rules-list .item-delete		{float:left; margin-left:6px;}
+				
+			/* Add a new region */
+				ul.campaign-rules-list .add-region				{float:right; padding-top:2px;}
+				ul.campaign-rules-list .add-region legend 		{display:none;}
+				ul.campaign-rules-list .add-region .btn-bold	{float:right; margin:1px 0 0 4px;}
+				
+				/* Javascript Version */
+					 ul.campaign-rules-list .add-region .btn-save			{display:block;}
+					 ul.campaign-rules-list .add-region .btn-add-region		{display:none;}
+					 
+					 .has-js ul.campaign-rules-list .add-region .btn-add-region		{display:block}
+					 .has-js ul.campaign-rules-list .add-region .btn-bold,
+					 .has-js ul.campaign-rules-list .add-region .text			{display:none}
+					 
+		/* Schedule the campaign rules */
+			dl.schedule			{padding-top:20px;}
+			.schedule dt		{width:60px;}
+			.schedule dd		{width:440px;}
+			dl.schedule	label	{margin-right:40px;}
+				
+
+		
+		
+		
+	
+		
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+/************************************************
+
+FILE:		  	ie7.css
+DESCRIPTION:  	File Fixes IE7 Bugs
+
+************************************************/
+
+
+	.clearfix 		{zoom: 1; display: block;}
+
+/* @group 1. Generic Fixes */
+	/* @group Generic List Fixes */
+	dl		{float:left;}
+	dt 		{float:left; clear:left;}				
+	dd		{float:none;}
+	
+	ol		{padding-left:0;}
+	ol ol	{padding-left:0;}	
+
+	/* @group end */
+/* @group end */
+
+
+/* @group 2. Navigation */	
+	
+	#nav-main ul li				{position:relative; width:auto;}
+	#nav-main ul li ul 			{position:absolute; top:32px; left:0; width:auto;}
+	#nav-main ul li ul li a		{width:140px; overflow:hidden;}
+	
+/* @end */
+
+	/* .btn-selects (Fix positioning issues + remove the curved corners)*/
+		.ul-select 						{float:left;}
+		.ul-select li					{float:left;}
+		.ul-select li .wrapper			{display:inline; position:absolute; top:20px; left:-2px; clear:left; background:none;}
+		.ul-select li .children			{display:inline; clear:left; position:static;}
+		
+		.ul-select li .select-content	{background:none;}
+		.ul-select li ul				{background:#E8E8E8; border:1px solid #B9B9B9; position:relative; left:5px;}
+		.ul-select li ul li				{position:static;}
+		
+		.ul-select li .t,
+		.ul-select li .t .tr,
+		.ul-select li .b,
+		.ul-select li .b .br			{display:none;}
+		
+		.ul-select li ul 				{float:left;}
+		.ul-select li li 				{display:inline; height:22px; }
+		
+		
+	/* Remove Borders from Anchors that don't need it */
+		a.item-edit,
+		a.item-delete,
+		a.item-up,
+		a.item-down,
+		a.item-edit:link,
+		a.item-delete:link,
+		a.item-up:link,
+		a.item-down:link,
+		a.item-edit:visited,
+		a.item-delete:visited,
+		a.item-up:visited,
+		a.item-down:visited,
+		a.item-edit:hover,
+		a.item-delete:hover,
+		a.item-up:hover,
+		a.item-down:hover		{border:none;}
+		
+		
+	/* Login Form */			
+		.frm-login legend a,			
+		.frm-login legend a:link,
+		.frm-login legend a:visited,
+		.frm-login legend a:hover,
+		.frm-login legend a:active	{position:relative; left:-7px;}
+		
+		/* Content Actions - Alternative form wide actions at the bottom on the content area */
+			/* Content Actions - Alternative form wide actions at the bottom on the content area (Form Page) */	
+			dl.content-actions			{left:-6px;}
+			
+			
+	/* Campaign Manager Form */
+		ul.campaign-rules-list .actions				{position:relative;}
+		ul.campaign-rules-list .item-edit,
+		ul.campaign-rules-list .item-delete			{position:absolute;}
+		ul.campaign-rules-list .item-edit			{top:-14px; right:20px;}
+		ul.campaign-rules-list .item-delete			{top:-14px; right:0;}

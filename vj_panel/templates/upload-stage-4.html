@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link href="../stylesheets/reset.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/layout.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/content.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/navigation.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/forms.css" rel="stylesheet" type="text/css" />
+
+	<!--[if lte IE 7]><link href="../stylesheets/fix_ie7.css" rel="stylesheet" type="text/css"/><![endif]-->
+	<!--[if lt IE 7]><link href="../stylesheets/fix_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->	
+	<link href="../stylesheets/fix_print.css" rel="stylesheet" type="text/css" media="print" />
+	
+	<script src='../javascripts/jquery-1.3.2.min.js' type="text/javascript"></script>
+	<script src='../javascripts/jquery.easing.js' type="text/javascript"></script>
+	<script src='../javascripts/application.js' type="text/javascript"></script>
+
+	<title>VJ Admin UI - Upload Stage 2</title>	
+	
+	<!--[if IE]><script src="../javascripts/html5.js" type="text/javascript"></script><![endif]-->
+	
+</head>
+
+<body>
+	<header>
+		<span class="container">
+			<a href="#" title="Return to the VideoJuicer Homepage" id="logo">VideoJuicer</a>		
+			<nav id="head">
+				<a href="#" title="Logout" class="btn btn-dark-bar dark-bar-L">Logout</a>
+				<a href="#" title="Visit the Developer Centre" class="btn btn-dark-bar dark-bar-M">Developer Centre</a>
+				<a href="#" title="Visit the Help Centre" class="btn btn-dark-bar dark-bar-R">Help Centre</a>
+			</nav>
+		</span>
+	</header>
+	
+	<!--[if !IE]> End <header> <![endif]-->
+	
+	<nav id="main">
+		<a href="#" title="View &amp; manage your Seeds" class="active">Seeds</a>
+		<a href="#" title="View &amp; manage your Users">Users</a>
+		<a href="#" title="View &amp; manage your Movies">Movies</a>
+		<a href="#" title="View &amp; manage your Promo's">Promos</a>
+		<a href="#" title="View &amp; manage your Campaigns">Campaigns</a>
+	</nav>
+	
+	<!--[if !IE]> End <nav #main> <![endif]-->
+	
+	<nav id="toolbar">	
+	
+		<ul class="ul-select clearfix">
+			<li><a href="#" title="" class="btn btn-default">Standard Button (Default)</a></li>
+			<li><a href="#" title="" class="btn btn-default default-selected">Standard Button (Selected)</a></li>
+			<li><a href="#" title="" class="btn btn-default default-disabled">Standard Button (Disabled)</a></li>
+			<li>
+				<a href="#" title="" class="btn btn-bar bar-L">Multiple</a>
+				<a href="#" title="" class="btn btn-bar bar-M">Button</a>
+				<a href="#" title="" class="btn btn-bar bar-R">Default</a>
+			</li>
+			<li>
+				<a href="#" title="" class="btn btn-bar bar-selected-L">Multiple</a>
+				<a href="#" title="" class="btn btn-bar bar-selected-M">Button</a>
+				<a href="#" title="" class="btn btn-bar bar-selected-R">Selected</a>
+			</li>
+			<li class="btn-select-parent closed" id="dropdown-1-li"> <!-- or .open -->
+				<a href="#" title="" class="btn btn-select" onclick="trigger_dropdown('#dropdown-1'); return false;">Drop Down</a>
+				<div class="wrapper clearfix">
+					<span class="top"><span class="tr"></span></span>
+					<div class="children clearfix">
+						<span class="t"><span class="tr"></span></span>
+						<div class="select-content clearfix">
+							<ul>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li class="selected"><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum lorem</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+							</ul>										
+						</div>
+						<span class="b"><span class="br"></span></span>
+					</div>
+				</div>
+			</li>
+			<li class="btn-select-parent closed"> <!-- OR .open -->
+				<a href="#" title="" class="btn btn-select-active" id="dropdown-2" onclick="trigger_dropdown('#dropdown-2'); return false;">Drop Down (clicked)</a>
+				<div class="wrapper clearfix">
+					<span class="top"><span class="tr"></span></span>
+					<div class="children clearfix">
+						<span class="t"><span class="tr"></span></span>
+						<div class="select-content clearfix">
+							<ul>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li class="selected"><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum lorem</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+							</ul>										
+						</div>
+						<span class="b"><span class="br"></span></span>
+					</div>
+				</div>
+			</li>
+		</ul>			
+		
+	</nav>
+	
+	<!--[if !IE]> End <nav #toolbar> <![endif]-->
+	
+<!--[if !IE]> END LAYOUT ( The Header, includes: <header>, <nav #main>, <nav #toolbar> )<![endif]-->	
+<!--[if !IE]> START LAYOUT ( <section #template>, Where all the content goes ) <![endif]-->
+
+	<!--	 //////////////////////   READ ME - About The Template Section  //////////
+	
+		<Section#template> is the wrapper for the content area on every page. 
+		It has 3 Main Types ( As of 26/04/09 ) which are specified using the class applied to the section:
+		
+			.aside-L	The Aside is on the left side of the page
+			.aside-R	The Aside is on the right side of the page
+			.aside-N	There is no aside, instead <section#template> takes up the full width of <section#template>
+
+		Additionaly it will need the .clearfix class in order to clear correctly.
+	
+		//////////////////////   READ ME  ////////////////////////// -->	
+	
+	<section id="template" class="aside-L clearfix">	
+		<div class="container clearfix">
+		
+		
+			<!-- MESSAGES SHOULD ALWAYS GO HERE -->
+		
+			<!-- A warning Message -->
+		
+			<div class="message error-msg">
+				<div class="top">
+					<img src="../images/spacer.gif" alt="" class="right"/>
+				</div>
+				<h6>
+					<img src="../images/spacer.gif" class="message-icon" alt=""/>
+					<span>A Warning message means the user needs to be warned about something potentially worrying ( .message .warning-msg )</span>
+					<a href="#" title="Close this message"><img src="../images/spacer.gif" alt="Close This message" class="message-close"/></a>
+				</h6>
+				<div class="msg-content">					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum lectus a mi. Curabitur nisl odio, laoreet nec, volutpat eget, suscipit faucibus, ante. Nulla facilisi. Integer sed nisl non ipsum egestas gravida.</p>
+					<ul>
+						<li><a href="#" title="">Solution 1</a></li>
+						<li><a href="#" title="">Solution 2</a></li>
+						<li><a href="#" title="">Solution 3</a></li>
+					</ul>
+				</div>
+				<div class="bottom">
+					<img src="../images/spacer.gif" alt="" class="right"/>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+		
+			<section id="content">
+			
+	<!--	 //////////////////////   READ ME - About Boxes  //////////
+		
+		<div.box> can have two styles:
+		
+			.box			A dark bordered box
+			.box .box-light	A light bordered box
+			
+		Both styles are flexible, that is they will expand and contract to fit the area they are put in. 
+		To facilitate this each box has the following structure:
+		
+			< .box >
+				< .outer-top >	.< right >
+				Title Content
+				< .inner-top >	< right >
+				< .content >
+				< .inner-bottom >	.< right >
+				< .footer >		footer content
+				< .outer-bottom>	< right >			.
+
+		//////////////////////   READ ME  ////////////////////////// -->	
+			
+			
+			
+				<div class="box">		
+					
+					<div class="outer-top"><div class="right"></div></div>					
+					<h1>Uploading 3 movies</h1>	
+					<div class="inner-top"><div class="right"></div></div>				
+					
+					
+					
+					<!-- START The Content -->					
+					
+					<div class="content clearfix ">		
+					
+						<form class="frm-flex" id="frm-upload" mthod="" action="">
+						
+							<div>
+								<div class="upload-msg">
+									<span class="top"><span class="tr"></span></span>
+									<span class="content">
+										<span class="icon"></span> You have 3 movies selected.  Any changes  you make will be applied to all 3 movies
+									
+									
+									</span>
+									<span class="bottom"><span class="br"></span></span>							
+								</div>						
+							</div>
+						
+					
+							<fieldset>
+								<legend><a>Upload Progress</a></legend>
+								<div class="top"><div class="right"></div></div>
+								<div class="frm-content clearfix">
+								
+									<!-- Upload One -->
+									
+
+									
+									<ul class="upload-progress clearfix">
+										<li class="clearfix">
+											<span class="title">mysecondmovie.mov</span> <span class="status">done</span>
+											<div class="progress-wrapper">
+												<div class="progress" style="width:100%;"><span class="percentage"></span></div>
+											</div>											
+										</li>
+										
+										<li class="clearfix">										
+											<span class="title">mysecondmovie.mov</span> <span class="status">200kb/s - 50minutes to go</span>
+											<div class="progress-wrapper" >
+												<div class="progress" style="width:66%"><span class="percentage">66%</span></div>
+											</div>
+										</li>
+										
+										<li class="clearfix">										
+											<span class="title">mysecondmovie.mov</span> <span class="status">queued</span>
+											<div class="progress-wrapper">
+												<div class="progress" style="width:0%;"><span class="percentage"></span></div>
+											</div>
+										</li>
+									</ul>
+									
+								</div>									
+								<div class="bottom"><div class="right"></div></div>	
+							</fieldset>
+							
+							
+							<!-- START Ownership & Copyright -->
+							
+							
+							<fieldset class="actions clearfix">
+								<legend><a>Cancel the upload</a></legend>
+								<button type="submit" class="btn btn-default default-lrg " id="frm-sumbit" title="Submit your changes">Cancel Upload</button>							
+							</fieldset>	
+							
+							
+							
+							
+						</form>
+					
+					</div>
+					
+					<div class="inner-bottom"><div class="right"></div></div>				
+					<section class="footer">
+					
+						
+					
+					</section>
+					<div class="outer-bottom"><div class="right"></div></div>
+					
+				</div>	
+
+				
+			<!--[if !IE]> END The Dark Box <![endif]-->			
+				
+			</section>				
+
+<!--[if !IE]> END LAYOUT ( <section #content>, the wide column ) <![endif]-->
+<!--[if !IE]> START LAYOUT ( <aside>, the narrow column ) <![endif]-->
+
+
+			<!--	 //////////////////////   READ ME - About The Aside //////////
+			
+			The aside is meant for content about the main content.  for example: 
+			
+				Did you know ?
+				Whats this form ?
+				You might also want To...
+				Related pages
+
+			//////////////////////   READ ME  ////////////////////////// -->		
+
+			
+			<aside class="box box-dark">
+				<form class="frm-minimal" method="" action="" id="frm-file-list">
+					<fieldset>
+						<legend><a>Files to add</a></legend>
+						
+						<div class="outer-top"><div class="right"></div></div>
+						<h1>Files To Upload</h1>
+						<div class="inner-top"><div class="right"></div></div>	
+				
+						
+						<div class="content">
+							
+							<div class="files-list files-list-disabled">
+					
+								<ul>
+									<li><a href="#" title="Edit this movie" class="movie-clip">firstmovie.mov</a> <a href="#" title="Remove this movie" class="remove">Remove</a></li>
+									<li class="active"><a href="#" title="Edit this movie" class="movie-clip">firstmovie.mov</a> <a href="#" title="Remove this movie" class="remove">Remove</a></li>
+									<li class="active"><a href="#" title="Edit this movie" class="movie-clip">firstmovie.mov</a> <a href="#" title="Remove this movie" class="remove">Remove</a></li>
+									<li class="active"><a href="#" title="Edit this movie" class="movie-clip">firstmovie.mov</a> <a href="#" title="Remove this movie" class="remove">Remove</a></li>
+									<li><a href="#" title="Edit this movie" class="movie-clip">firstmoviefilenamethatisreallylongandwilldefainatelyhappen.mov</a> <a href="#" title="Remove this movie" class="remove">Remove</a></li>
+								</ul>
+								
+								<a href="#" class="btn btn-default default-add floatR">
+									Add another file
+								</a>
+								
+							</div>
+							
+							<div class="clear"></div>	
+						
+						</div>
+						
+						<div class="inner-bottom"><div class="right"></div></div>
+						<section class="footer">
+						
+							<button class="btn btn-dark-lrg dark-lrg-disabled">
+								Upload all 5 Movies
+							</button>
+				
+						</section>
+						<div class="outer-bottom"><div class="right"></div></div>				
+						
+					</fieldset>
+				</form>
+			</aside>
+			
+			
+			
+			
+			
+			
+	<!--[if !IE]> END ( <aside>, the narrow column ) <![endif]-->
+			
+		</div>
+		
+	<!--[if !IE]> END The Container (Sets the width of the page) <![endif]-->
+	</section>
+
+<!--[if !IE]> END LAYOUT ( <section #template>, All content ends by here ) <![endif]-->
+<!--[if !IE]> START LAYOUT ( <footer>, the footer ) <![endif]-->	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<footer>
+		<div id="copyright"><span class="container"><small>&copy; Videojuicer 2009, All rights Reserved</small></span></div>
+	<!--[if !IE]> END The Copyright Info <![endif]-->
+		
+		<section id="info">
+			<h1>Information Centre</h1>
+			<p>Find Out what's Happeneing at Videojuicer...</p>
+			
+			<ul>
+				<li><a href="#" title="">Product updates &amp; latest release information</a></li>
+				<li><a href="#" title="">New features and walk-throughs</a></li>
+				<li><a href="#" title="">Future platform roadmap</a></li>
+				<li><a href="#" title="">Videojuicer developer blog</a></li>
+				<li><a href="#" title="">Careers at Videojuicer</a></li>
+				<li><a href="#" title="">Frequently Asked Questions</a></li>
+			</ul>		
+		</section>
+		
+	<!--[if !IE]> END The Information Centre <![endif]-->
+		
+		<section id="develop">
+			<h1>Developer Centre</h1>
+			<p>Videojuicer integration resource for developers...</p>
+			
+			<ul>
+				<li><a href="#" title="">Videojuicer API Overview</a></li>
+				<li><a href="#" title="">Getting started with the Videojuicer API</a></li>
+				<li><a href="#" title="">Videojuicer Core SDK Download</a></li>
+				<li><a href="#" title="">Videojuicer Player SDK Download</a></li>
+				<li><a href="#" title="">API Documentation &amp; Method Reference</a></li>
+				<li><a href="#" title="">Frequently Asked Questions</a></li>
+			</ul>		
+		</section>
+		
+	<!--[if !IE]> END The Developer Centre <![endif]-->
+	
+		<section id="help">
+			<h1>Help Centre</h1>
+			<form method="" action="" class="frm-srch">
+				<fieldset>
+					<legend class="hide">Search The Help Centre</legend>
+					<label class="hide" for="srch-footer">Search:</label>
+					<input type="text" id="srch-footer" class="textfield textfield-dark" value="Search Help Centre"/>
+					<button type="submit" title="Search the help Centre">Submit</button>
+				</fieldset>			
+			</form>
+			
+			<ul>
+				<li><a href="#" title="">Videojuicer API Overview</a></li>
+				<li><a href="#" title="">Getting started with the Videojuicer API</a></li>
+				<li><a href="#" title="">Videojuicer Core SDK Download</a></li>
+				<li><a href="#" title="">Videojuicer Player SDK Download</a></li>
+				<li><a href="#" title="">API Documentation &amp; Method Reference</a></li>
+				<li><a href="#" title="">Frequently Asked Questions</a></li>
+			</ul>		
+		</section>
+	
+	<!--[if !IE]> END The Help Centre <![endif]-->
+	
+	</footer>
+	
+<!--[if !IE]> END The page <![endif]-->
+
+
+
+
+
+
+</body>
+</html>

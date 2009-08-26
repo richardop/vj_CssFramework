@@ -1,0 +1,277 @@
+/************************************************
+
+FILE:		  	navigation.css
+DESCRIPTION:  	File Defines Navigation eleements (May be some cross over in layout for main and top nav)
+
+************************************************/
+
+/* @group 1.Generic navigation */
+	a,
+	a:link,
+	a:visited 	{color: #2E2E2E; text-decoration:none; border-bottom:1px dotted #2e2e2e;}
+	a:hover 	{border-bottom:1px solid #2e2e2e;}
+	a:focus,
+	a:active 	{color: #2E2E2E;}
+
+	strong a,
+	strong a:link,
+	strong a:visited 	{font-weight:bold;}
+	strong a:hover 		{text-decoration:underline;}
+	strong a:focus,
+	strong a:active 	{color: #2E2E2E;}
+	
+	a strong,
+	a:link strong,
+	a:visited strong 	{font-weight:bold;}
+	a:hover strong 		{text-decoration:underline;}
+	a:focus strong,
+	a:active strong 	{color: #2E2E2E;}
+	
+	article a,
+	article a:link,
+	article a:visited	{color:#c22026; border:none;}
+	article a:hover,
+	article a:focus		{border-bottom:1px dotted #2e2e2e;}
+	article a:active	{color:#c22026;}
+
+/* @end */
+	
+
+
+
+
+
+/* @group 3.Navigation within Content */	
+
+	/* Channel (A little button with a channel name in it and a remove button on the right) */
+	
+	.channel					{margin:0 0 4px 0; padding:0; background:#eaeaea; font-size:93%;}
+	.channel .top,
+	.channel .top .tr,
+	.channel .bottom .br,
+	.channel .bottom			{display:block; height:7px; position:relative }
+		
+	.channel .top				{background-position: 0 -426px;}
+	.channel .top .tr			{width:8px; position:absolute; right:0; background-position: right -426px;}
+	.channel .bottom .br		{width:8px; position:absolute; right:0; background-position: right -442px;}
+	.channel .bottom			{background-position: 0 -442px;}
+	
+	.channel .channel-content			{display:block; position:relative; top:-3px; padding:0 7px; border-left:1px solid #d7d7d7; border-right:1px solid #d7d7d7;}
+	.channel .channel-content .text		{display:block; position:relative; bottom:-3px; border:none; width:342px;}
+	.channel .channel-content .remove	{position:absolute; right:5px; bottom:-3px; }
+
+	
+	
+	/* Pagination */
+		ul.pag					{width:100%; margin:0 0 12px 0; padding:0; text-align:right; font-size:85%; clear:both; }
+		ul.pag li 				{display:inline; margin:0 8px 0 7px; padding:0; list-style-type:none; color:#aaa;}
+		ul.pag li.floatL		{display:block; float:left; margin: 0; padding:0 0 0 8px;}	
+		
+		ul.pag a,
+		ul.pag a:link,
+		ul.pag a:visited,
+		ul.pag a:hover,
+		ul.pag a:focus,
+		ul.pag a:active			{border:none; color:#808080;}
+		
+		ul.pag-bottom			{margin:0;}
+	
+	
+	/* Tabbed Nav */
+		.tabbed-box						{margin-bottom:20px; background-position:0 -510px; background-repeat:no-repeat; position:relative;}
+			
+			.tabbed-box .right			{display:block; width:1px; height:64px; position:absolute; right:0; background-position:-1199px -536px;}
+			fieldset div.tabbed-box		{margin-bottom:0;}		
+			.tabbed-content				{padding:20px 10px; clear:both;}
+		
+		/*Tabbed Nav (Nav Elements) */
+			ul.nav-tabbed 						{height:27px; margin:0; padding:0;}
+			ul.nav-tabbed li					{float:left; list-style-type:none; margin:0 1px 0 0; padding:0;}
+			ul.nav-tabbed li a					{display:block; padding:0 7px 0 10px; margin:0 4px 0 0; height:26px; line-height:26px; position:relative; background-position:-600px -219px;}
+			ul.nav-tabbed li a i				{display:block; width:4px; height:26px; position:absolute; right:-4px; top:0; background-position:-1196px -219px;}
+
+			ul.nav-tabbed li a,
+			ul.nav-tabbed li a:link,
+			ul.nav-tabbed li a:visited,
+			ul.nav-tabbed li a:hover,
+			ul.nav-tabbed li a:focus,
+			ul.nav-tabbed li a:active			{color:#727272; font-size:93%; border-bottom:none;}
+	
+			ul.nav-tabbed li.active				{position:relative; bottom:-1px;}
+			ul.nav-tabbed li.active a i			{background-position:-576px -219px; height:27px;}
+			ul.nav-tabbed li.active a,
+			ul.nav-tabbed li.active a:link,
+			ul.nav-tabbed li.active a:visited,
+			ul.nav-tabbed li.active a:hover,
+			ul.nav-tabbed li.active a:focus,
+			ul.nav-tabbed li.active a:active	{color:#727272; height:27px; background-position:0 -219px; position:relative; top:-1px;}	
+	
+		
+	/* Icons */
+		a.item-edit,
+		a.item-delete,
+		a.item-up,
+		a.item-down		{display:block; width:15px; height:14px; overflow:hidden; text-indent:-999px; border:none;}
+		
+		a.item-edit		{background-position:0 -800px;}
+		a.item-delete	{width:14px; background-position:0 -820px;}
+		a.item-up		{width:9px; height:8px; background-position:0 -840px; margin-left:4px;}
+		a.item-down		{width:9px; height:6px; background-position:0 -848px; margin-left:4px;}
+		
+		a.movie-clip	{padding-left:22px; background-position:0 -1138px;}
+		a.remove,
+		a.remove:link,
+		a.remove:visited,
+		a.remove:hover,
+		a.remove:focus,
+		a.remove:active	{display:block; width:16px; height:15px; overflow:hidden; text-indent:-999px; background-position:0 -1200px; border:none;}
+
+		a.links,
+		a.links:link,
+		a.links:visited,
+		a.links:hover,
+		a.links:active	{display: block; width: 16px; height: 10px; background-position:0 -1239px; text-indent:-999px; border:none;}
+		
+		.table-list .links	{float:right; position:relative; right:16px; top:6px;}
+	
+	
+	/* Buttons */
+		.btn			{display:inline; padding:0; margin:0; font-weight:normal; background:none; border:none;}	
+		.btn span		{float:left; padding:0 0 0 9px; width:auto; height:20px; color:#242424; line-height:20px; margin:0; white-space: nowrap; }
+		.btn i			{float:left; width:9px; height:20px; }
+		
+		.btn, 
+		.btn:link, 
+		.btn:visited, 
+		.btn:hover, 
+		.btn:active,
+		.btn:hover, 
+		button:hover				{cursor:pointer; border:none;}	
+	
+		button::-moz-focus-inner 	{padding:0; border:none}
+		
+		button.btn		{float:left;}
+		a.btn			{border:none;}
+		
+		
+		/* Default */			
+			.btn-default			{font-size:85%;}
+			.btn-default span		{color:#282727; background-position:left 0;}
+			.btn-default i			{background-position:right 0;}
+			
+			/* Default - SELECTED */			
+				.default-selected			{}
+				.default-selected:hover		{cursor:default;}
+				.default-selected span		{background-position:left -20px;}
+				.default-selected i			{background-position:right -20px;}
+				
+			/* Default - Disabled */			
+				.default-disabled			{}
+				.default-disabled:hover		{cursor:default;}
+				.default-disabled span		{color:#888; background-position:left -40px;}
+				.default-disabled i			{background-position:right -40px;}
+				
+			/* Default - ADD */
+				.default-add				{}
+				.default-add span 			{padding-left:18px; background-position:0 -424px;}
+				.default-add i				{background-position:right -424px;}
+				
+			/* Default - ADD DISABLED*/
+				.default-add-disabled:hover	{cursor:default;}
+				.default-add-disabled span 	{color:#c8c8c8; padding-left:18px; background-position:0 -468px;}
+				.default-add-disabled i		{background-position:right -468px;}
+				
+			/* Default - LARGE */
+				.default-lrg				{}
+				.default-lrg span 			{height:24px; line-height: 24px; padding-left:10px; background-position:0 -444px;}
+				.default-lrg i				{height:24px; width:10px; background-position:right -444px;}
+				
+		/* Bold - Boldly Boldify any buttons */
+			.btn-bold span	{font-weight:bold;}
+				
+		/* Bar Buttons (Multiple buttons next to each other to look like a bar)*/
+			.btn-bar 		{font-size:85%;}
+			.bar-L span		{background-position:left -60px;}
+			.bar-L i		{background-position:-391px -60px; width:10px;}
+			.bar-M span		{background-position:-401px -60px;}
+			.bar-M i		{background-position:-391px -60px; width:10px}
+			.bar-R span		{background-position:-401px -60px;}
+			.bar-R i		{background-position:right -60px;}
+			
+			/* Bar Buttons - Selected */
+				.bar-selected-L:hover,
+				.bar-selected-M:hover,
+				.bar-selected-R:hover	{cursor:default;}
+				.bar-selected-L span	{background-position:left -80px;}
+				.bar-selected-L i		{background-position:-391px -80px; width:10px;}
+				.bar-selected-M span	{background-position:-401px -80px;}
+				.bar-selected-M i		{background-position:-391px -80px; width:10px;}
+				.bar-selected-R span	{background-position:-401px -80px;}
+				.bar-selected-R i		{background-position:right -80px;}
+	
+
+		/* Dark bar (A Dark button style that can have several buttons next to each other to look like a bar) */
+			/* takes BG image from .spr-01, check layout.css */
+			.btn-dark-bar					{font-size:85%;}
+			.btn-dark-bar span				{color:#fff; font-weight:normal; padding-left:10px; height:20px; line-height:20px; background: url(../images/sprites/spr_01_interface_8.png) -600px 0;}
+			.btn-dark-bar i					{height:20px; width:10px; line-height:20px; background: url(../images/sprites/spr_01_interface_8.png) -1190px 0;}
+			
+				/* Left, Middle & Right Styles */
+					.dark-bar-L	i	 		{width:9px; background-position:-610px 0; border-right:1px solid #131313;}
+					.dark-bar-M	span 		{background-position:-610px 0; padding-left:8px;}
+					.dark-bar-M	i	 		{background-position:-610px 0; width:9px; border-right:1px solid #131313; width:9px;}
+					.dark-bar-R span		{background-position:-610px 0;}
+					
+		/* Large Dark button */
+			.btn-dark-lrg					{font-size:100%; }
+			.btn-dark-lrg span 				{height:22px; padding-top:2px; color:#fff; padding-left:14px; background-position:left -400px;}
+			.btn-dark-lrg i					{height:24px; width:14px; background-position:right -400px;}
+			
+			/* Disabled */
+			.dark-lrg-disabled:hover		{cursor:default;}
+			.dark-lrg-disabled span			{color:#636363;}
+					
+					
+					
+					
+					
+					
+					
+					
+		/* Drop Down Buttons (Buttons that imitate <select> )*/
+			.btn-select			{}
+			.btn-select span	{background-position:left -100px; font-size:85%;}
+			.btn-select i		{background-position:right -100px; width:22px;}
+			
+			/* Drop Down Buttons (Active - Once the user has clicked it) */
+				.btn-select-active			{}
+				.btn-select-active span		{background-position:left -120px; font-size:85%;}
+				.btn-select-active i		{background-position:right -120px; width:22px;}
+			
+			/* UL & LI for the drop down */
+				.ul-select						{margin:0; padding:0;}
+				.ul-select li					{float:none; display:block; margin:0; padding-left:0; list-style-type:none; position:relative; }
+				.ul-select li .wrapper			{}
+				.ul-select li .children			{float:left; top:20px; position:absolute; left:-2px;}
+				.ul-select li .select-content	{background-position: -400px -147px; position:relative;}
+				
+					.ul-select li ul 			{padding:0; margin:0; position:relative; right:-7px; background-position:right -147px;}
+					.ul-select li li 			{float:none; min-height:22px; width:auto; line-height:22px; padding:0; margin:0; position:relative; left:-4px;}
+					.ul-select li li a,
+					.ul-select li li a:link,
+					.ul-select li li a:visited			{display:block; margin:0; padding: 0 12px; font-size:85%; color:#282727; border:none;}
+					.ul-select li li a:hover			{background:#d7d7d7;}
+					.ul-select li li.selected a			{color:#282727; background:#d7d7d7;}
+					.ul-select li li.selected a:hover	{cursor:default;}
+				
+				.ul-select li .t				{position:absolute; display:block; height:7px; position:relative; background-position:-400px -140px;}
+				.ul-select li .t .tr			{display:block; float:right; height:7px; width:7px; position:relative; right:-7px; background-position:right -140px;}
+				.ul-select li .b				{position:absolute; display:block; height:9px; position:relative; bottom:; background-position:-400px -391px;}
+				.ul-select li .b .br			{display:block; float:right; height:9px; width:7px; position:relative; right:-7px; background-position:right -391px;}
+				
+			/* Now setup shown & Hidden states */
+				.ul-select li.open .children		{z-index:999; display:block;}
+				.ul-select li.closed .wrapper		{display:none;}		
+
+		
+			

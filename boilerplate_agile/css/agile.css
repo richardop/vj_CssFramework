@@ -1,0 +1,122 @@
+header,
+nav,
+footer		{display:block;}
+
+
+
+
+
+/*    @group 1.LAYOUT      */
+
+	body		{background:#F3F3F3; padding:10px 10px 10px 10px;}
+	#page		{width:960px;}
+	header		{padding:10px; height:40px; clear: both; margin-bottom:10px;}
+	#toolbar	{background:#fff; padding:10px; margin-bottom:10px;}	
+	#template	{float: left; display:block; margin-bottom:10px; }
+	footer		{clear:both; font-size:85%; padding:10px; color:#9E9E9E; background:#F8F8F8;}
+	
+	/* Columns */		
+		#clm-one,
+		#clm-two,
+		#clm-three	{float: left; background:#fff; padding:10px;}
+		
+	/* One Two One */
+		.one-two-one #clm-one,
+		.one-two-one #clm-three	{width:140px;}
+		.one-two-one #clm-two	{margin:0 10px; width:600px;}
+	
+
+
+
+/* @end */
+
+
+
+
+
+/*    @group 2.NAVIGATION     */
+	a,
+	a:link,
+	a:visited		
+	a:hover,
+	a:focus,
+	a:active		{text-decoration:none; color:#0000CA;}
+
+	header nav		{font-size:85%;}
+	
+	#main			{background:#fff; margin-bottom:10px; font-size:108%; border:1px solid #E6E6E6;}
+	#main a 		{display: block; float: left; height: 30px; line-height: 30px; background:#F8F8F8; padding:0 10px; border-right:1px solid #E6E6E6;}			
+	#main strong a,
+	#main a:hover	{font-weight:normal; background:#E3E3E3;}
+	
+	#toolbar input,
+	#toolbar a 		{float:left; display:block;}
+	#toolbar a,
+	#toolbar button	{margin-left:5px; position:relative; bottom:-2px;}
+	
+	#sub a 					{display:block; padding:2px 5px; font-size: 93%; background:#F8F8F8; margin:0 0 3px 0; border:1px solid #E6E6E6;}
+	#sub a:hover			{font-weight:normal; background:#EEEEEE;}
+	#sub li li				{padding-left:10px;}
+	#sub li li a 			{background:#fff; border:1px solid #EEEEEE;}
+	#sub li li a:hover		{background:#F8F8F8}
+	#sub li li li a,
+	#sub li li li a:hover 	{border:none; background:#fff;}
+	
+	
+	nav.horizontal a			{margin:0 4px 0 0;}
+	
+	
+
+
+/* @end */
+
+
+	
+
+
+
+
+
+/*    @group 3.CONTENT      */
+
+
+	/* @group 3.1 Quickfix Styles */
+		.hide				{display: none;}
+		.floatL				{float: left;}
+		.floatR				{float: right;}
+		.alignL				{text-align: left;}	
+		.alignC				{text-align: center;}
+		.alignR				{text-align: right;}
+		.clear				{clear:both; font-size:1px; height:1px; line-height:1px; margin:0px; padding:0px; width:100%;}
+		.clearfix:after		{content: "."; display: block; height: 0; clear: both; visibility: hidden;}	
+
+	
+	
+	
+	
+	/* @end */
+
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    @group 4.FORMS     */
+
+
+/* @end Forms */
+

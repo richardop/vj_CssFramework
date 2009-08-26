@@ -1,0 +1,231 @@
+/************************************************
+
+FILE:		  	content.css
+DESCRIPTION:  	File Defines Basic Content Styling
+
+1. Global Styles (affects all pages)
+2. Reusable Styles (Appears in more than one page type)
+3. Specific Styles (Appears in just one page type)
+
+************************************************/
+
+/* @group 1. Global Styles (affects all pages) */
+
+	
+	
+	/* @group QuickFix Styles */
+		.hide		{display: none;}
+		.clearB		{clear: both;}
+		.clearL		{clear: left;}
+		.clearR		{clear: right;}
+		.floatL		{float: left;}
+		.floatR		{float: right;}
+		.alignL		{text-align: left;}	
+		.alignC		{text-align: center;}
+		.alignR		{text-align: right;}
+		
+		.clear						{clear:both; font-size:1px; height:1px; line-height:1px; margin:0px; padding:0px; width:100%;}
+		.clearfix:after				{content: "."; display: block; height: 0; clear: both; visibility: hidden;}	
+	/* @end */
+
+	/* @group Headings */
+		h1, h2 , h3, h4, h5, h6		{font-weight:bold; margin:0; padding:0; color:#3d3d3d;}
+		h1 							{font-size: 116%; margin:0 0 20px 0;}
+		h2, h3		 				{font-size: 108%;}
+		h4, h5, h6					{font-size: 100%;}
+	/* @end */
+
+	/* @group Typography */	
+		p 			{color:#888; padding:0 0 16px 0; font-size:100%; line-height:18px;}
+		strong 		{font-weight:bold; color: #191919;}
+		p strong	{color:#5f5f5f;}
+		small		{color:#c0c0c0;}
+		em			{color:#5f5f5f;}
+	
+		/* @group Quotes */
+			blockquote.shortquote 	{color: #666; font-style: italic; padding: 5px;}
+			blockquote 				{margin: 0 8px 8px 8px;}
+			blockquote p 			{font-style: italic; padding: 12px 0;}
+			blockquote cite 		{text-align: right; font-weight: bold; display: block; margin:8px 8px 0 8px;}
+		/* @end */
+
+	/* @end */
+
+	/* @group Images */
+		p img 			{float:left; margin: 8px; }
+	/* @end */	
+
+	/* @group Tables */
+		table 			{margin: 16px 0 32px 0; clear:both; background:#f3f3f3; text-align:left; border:1px solid #e4e4e4;}
+		tr				{border-bottom:1px solid #fff;}
+		th				{font-weight:bold; padding:8px 8px; font-size:100%; border-bottom:2px solid #fff; background:#e4e4e4; }
+		td 				{border: none; font-size:85%; line-height:15px; padding:6px 8px; margin:0;}		
+		th.clm1			{padding:4px 8px;}
+		tr.odd td 		{background:#fff; }
+		tr.even td 		{}
+		td.clm1, 
+		td.clm2, 
+		td.clm3  		{}
+	/* @end */
+
+	/* @group Lists */
+		ul, ol 			{padding: 0 0 16px 16px;  }
+		ul ul, ol ol	{padding: 8px 0 8px 16px;}
+		ul li			{padding: 0 8px 0 0; list-style-type:square;}
+		ul li li		{list-style-type:circle;}
+		ol li			{list-style-type: decimal; margin-left:16px;}
+		ol li li		{list-style-type: lower-alpha;}
+		
+		dl				{float:left; display:block; margin:8px 0;}
+		dt				{width:80px; float:left; clear:left; margin:4px 0; padding-left:16px; color:#000;}
+		dd				{width:300px; float:left; clear:right; margin:4px 0;}
+	/* @end */
+
+	/* @group Miscelanious */
+		hr 		{padding:0; background: none; height:1px; border:none; border-bottom:1px dotted #ccc;}
+	/* @end */
+
+/* @end Global Styles */
+
+
+
+
+
+
+/* @group 2. Reusable Styles (Appears in more than one page type) */
+
+	/* Messages (Messages that the app sends to the user - icnrect pass etc) */
+	/* Generic Styles first (Styles that affect all messages: error, sucess + warning) */
+		div.message							{margin-bottom:10px;}
+		div.message div.top					{height:8px;}
+		div.message div.top img.right		{float:right; width:10px; height:8px;}
+		div.message h6						{height:21px; margin:0; padding:0 9px; font-size:108%;}
+		div.message h6 img.message-icon		{float:left; width:24px; height:15px;}
+		div.message h6 span					{float:left;}
+		div.message h6 img.message-close	{float:right; width:17px; height:16px;}		
+		
+		div.message div.msg-content			{background:#fff; padding:10px 0 0 0; border-left:2px solid; border-right:2px solid;}		
+		div.message div.msg-content p		{padding:0 10px;}
+		
+		div.message div.bottom				{height:8px;}
+		div.message div.bottom img.right	{float:right; width:10px; height:8px;}
+		
+		div.message ul		{padding: 10px 0 8px 0;}
+		div.message li		{padding: 0 0 2px 26px; margin:0; list-style-type:none; background:url(../img/messages/bullets-messages.png) no-repeat;}
+		
+	/* Warning Message Styles */		
+		div.warning-msg div.top,
+		div.warning-msg  div.top img.right,
+		div.warning-msg  div.bottom,
+		div.warning-msg  div.bottom img.right,
+		div.warning-msg  h6,
+		/* div.warning-msg  h6 img.message-icon, */ /*Left here just incase, is in the markup */
+		div.warning-msg  h6 img.message-close		{background:url(../img/messages/bg-message-warning.png) no-repeat;}
+		
+		div.warning-msg  h6						{background-position:-2px -8px; color:#333131;}
+		div.warning-msg  h6 img.message-icon	{background-position:-9px -8px;}
+		div.warning-msg  h6 img.message-close	{background-position:-1173px -7px;}
+		div.warning-msg  div.top				{background-position:left top;}
+		div.warning-msg  div.top img.right		{background-position:right top;}
+		div.warning-msg  div.bottom				{background-position:left bottom;}
+		div.warning-msg  div.bottom img.right	{background-position:right bottom;}
+		
+		div.warning-msg div.msg-content			{border-color:#999da3; color:#676c74;}
+		div.warning-msg div.msg-content p,
+		div.warning-msg div.msg-content ul		{color:#676c74;}
+		div.warning-msg div.msg-content li		{background-position:10px 3px;}
+		
+	/* Error Message Styles */
+		div.error-msg  div.top,
+		div.error-msg  div.top img.right,
+		div.error-msg  div.bottom,
+		div.error-msg  div.bottom img.right,
+		div.error-msg  h6,
+		/* div.error-msg  h6 img.message-icon, */	/*Left here just incase, is in the markup */
+		div.error-msg  h6 img.message-close			{background:url(../img/messages/bg-message-error.png) no-repeat;}
+		
+		div.error-msg  h6						{background-position:-2px -8px; color:#fff;}
+		div.error-msg  h6 img.message-icon		{background-position:-9px -8px;}
+		div.error-msg  h6 img.message-close		{background-position:-1173px -7px;}
+		div.error-msg  div.top					{background-position:left top;}
+		div.error-msg  div.top img.right		{background-position:right top;}
+		div.error-msg  div.bottom				{background-position:left bottom;}
+		div.error-msg  div.bottom img.right		{background-position:right bottom;}
+		
+		div.error-msg div.msg-content			{border-color:#580007; color:#87090f;}		
+		div.error-msg div.msg-content p,
+		div.error-msg div.msg-content ul		{color:#87090f;}
+		div.error-msg div.msg-content li		{background-position:10px -97px;}
+	
+	/* Sucess Message Styles */
+		div.success-msg  div.top,
+		div.success-msg  div.top img.right,
+		div.success-msg  div.bottom,
+		div.success-msg  div.bottom img.right,
+		div.success-msg  h6,
+		/* div.success-msg  h6 img.message-icon, */ /*Left here just incase, is in the markup */
+		div.success-msg  h6 img.message-close		{background:url(../img/messages/bg-message-success.png) no-repeat;}
+
+		div.success-msg  h6						{background-position:-2px -8px; color:#fff;}
+		div.success-msg  h6 img.message-icon	{background-position:-9px -8px;}
+		div.success-msg  h6 img.message-close	{background-position:-1173px -7px;}
+		div.success-msg  div.top				{background-position:left top;}
+		div.success-msg  div.top img.right		{background-position:right top;}
+		div.success-msg  div.bottom				{background-position:left bottom;}
+		div.success-msg  div.bottom img.right	{background-position:right bottom;}
+		
+		div.success-msg div.msg-content			{border-color:#85a900; color:#85a900;}
+		div.success-msg div.msg-content	p,
+		div.success-msg div.msg-content	ul		{color:#85a900;}
+		div.success-msg div.msg-content li		{background-position:10px -197px;}
+		
+	/* Tabbed Navigation Boxes (Styles are also in navigation.css) */
+		div.tabbed-box			{background:#E0E0E0; margin-bottom:20px;}
+			div.tabbed-content	{background:#ccc;border-bottom:1px solid #999; padding-top:10px; clear:both;}
+			
+	/* Horizontal Sliding Navigation (Layout for this navigation system is in navigation.css)*/	
+		div.nav-horizontal-slide									{margin:0; padding:0; clear:both;}  			/* JS applies a multiple of the width for the LI */
+			div.nav-horizontal-slide div.viewport-outer				{}  											/* JS applies a multiple of the width for the LI */
+				div.nav-horizontal-slide div.viewport-middle		{position: relative; float:left;}							/* JS applies a multiple of the width for the LI */
+					div.nav-horizontal-slide ul.viewport			{position: relative; padding:0; margin:0;} 	/* JS applies a multiple of the width for the LI */	
+					div.nav-horizontal-slide ul.viewport li			{float:left; width:75px; height:75px; padding:0; margin:0 0 10px 0; text-align:center; list-style-type:none;}
+					div.nav-horizontal-slide ul.viewport li img		{width:59px; height:59px; margin-top:8px; background:#E0E0E0;}
+					
+					div.nav-horizontal-slide span.description		{display:none;}
+					/* Content within the sliding navigation needs to go here */
+	
+
+			
+		
+		
+		
+	
+
+
+
+		
+		
+	/* Thumbnails */
+		
+
+	
+	
+	
+	
+/* @end */
+
+
+
+
+
+/* @group 3. Specific Styles (Appears in just one page type) */
+			
+
+	
+		
+
+
+
+			
+
+/* @end */

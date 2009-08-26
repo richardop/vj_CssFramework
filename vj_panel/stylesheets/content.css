@@ -1,0 +1,493 @@
+/************************************************
+
+FILE:		  	content.css
+DESCRIPTION:  	File Defines Basic Content Styling
+
+1. Global Styles (affects all pages)
+2. Reusable Styles (Appears in more than one page type)
+3. Specific Styles (Appears in just one page type)
+
+************************************************/
+
+/* @group 1. Global Styles (affects all pages) */
+
+	
+	
+	/* @group QuickFix Styles */
+		.hide		{display: none;}
+		.clearB		{clear: both;}
+		.clearL		{clear: left;}
+		.clearR		{clear: right;}
+		.floatL		{float: left;}
+		.floatR		{float: right;}
+		.alignL		{text-align: left;}	
+		.alignC		{text-align: center;}
+		.alignR		{text-align: right;}
+		
+		.clear						{clear:both; font-size:1px; height:1px; line-height:1px; margin:0px; padding:0px; width:100%;}
+		.clearfix:after				{content: "."; display: block; height: 0; clear: both; visibility: hidden;}	
+	/* @end */
+
+	/* @group Headings */
+		h1, h2 , h3, h4, h5, h6		{font-weight:bold; margin:0; padding:0; color:#3d3d3d;}
+		h1 							{font-size: 116%; margin:0 0 20px 0;}
+		h2, h3, h4, h5, h6			{font-size: 93%; color:#2e2e2e; margin:0; padding:0 0 2px 0; font-weight:normal;}
+							
+	/* @end */
+
+	/* @group Typography */	
+		p 			{color:#808080; padding:0 0 16px 0; margin:0; font-size:93%; line-height:18px;}
+		strong 		{font-weight:normal; color: #2E2E2E;}
+		small		{color:#a6a6a6;}
+		em			{color:#808080;}
+	
+		/* @group Quotes */
+			blockquote.shortquote 	{color: #666; font-style: italic; padding: 5px;}
+			blockquote 				{margin: 0 8px 8px 8px;}
+			blockquote p 			{font-style: italic; padding: 12px 0;}
+			blockquote cite 		{text-align: right; font-weight: bold; display: block; margin:8px 8px 0 8px;}
+		/* @end */
+
+	/* @end */
+
+	/* @group Images */
+		p img 			{float:left; margin: 8px 16px; }
+	/* @end */	
+
+	/* @group Tables */
+		table 			{margin: 16px 0 32px 0; clear:both; text-align:left; border:1px solid #e8e8e8;}
+		tr				{}
+		th				{font-weight:bold; padding:8px 8px; font-size:100%; color:#808080; background:#E8E8E8; }
+		td 				{border: none; font-size:85%; line-height:15px; padding:6px 8px; margin:0;}		
+		th.clm1			{padding:4px 8px;}
+		tr.odd td 		{background:#fbfbfb; }
+		tr.even td 		{}
+		td.clm1, 
+		td.clm2, 
+		td.clm3  		{}
+	/* @end */
+
+	/* @group Lists */
+		ul, ol 			{padding: 0 0 16px 16px; margin:0;}
+		ul ul, ol ol	{padding: 8px 0 8px 0;}
+		ul li			{padding: 0 8px 2px 4px; margin-left:16px; list-style-type:disc;}
+		ul li li		{list-style-type:circle;}
+		ol li			{list-style-type: decimal; margin-left:16px; padding-bottom:2px;}
+		ol li li		{list-style-type: lower-alpha;}
+		
+		dl				{float:left; display:block; margin:8px 0;}
+		dt				{width:80px; float:left; clear:left; margin:4px 0; padding-left:16px; color:#000;}
+		dd				{width:300px; float:left; clear:right; margin:4px 0;}
+	/* @end */
+
+	/* @group Miscelanious */
+		hr 		{padding:0; background: none; height:1px; margin:2px 0 16px 0; border:none; border-bottom:1px solid #2e2e2e;}
+	/* @end */
+
+/* @end Global Styles */
+
+
+
+
+
+
+/* @group 2. Reusable Styles (Appears in more than one page type) */
+
+
+	/* Articles */
+		/* Lists */
+			article ol li,
+			article ul li,
+			article li li		{font-size:12px;} /* Use px as % with nested li's is not workable */
+			
+		/* Nested DL's */
+			article dl				{float:none; display:block; padding:0 28px; margin: 28px 0 28px 0; clear:both; font-size:12px;} /* Use px as % with nested li's is not workable */
+			article dt				{width: 122px; padding:8px 15px; margin:0; color:#2e2e2e;}
+			article dd				{width: 340px; padding:8px 15px; margin:0; color:#808080;}
+			
+			article dt.parent		{border-bottom:1px solid #e2e2e2;}
+			article dd.parent		{padding-bottom:0;}
+			article dd.parent dl	{border-top:1px solid #e2e2e2;}
+			
+			article dl .row			{float: left; border-bottom:1px solid #e2e2e2;}
+			article dl dl .row		{border:none;}
+			
+			article dl dl			{padding: 0 28px 0 28px; margin: 8px 0 0 0; width:370px; padding:0; position:relative; left:-15px;}
+			article dl dl dt		{float: left; width:144px;}
+			article dl dl dd		{float: left; width:196px; padding:8px 0;}
+		
+		/* Typography */
+			article p				{line-height:20px; padding-bottom:28px;}
+			article h2				{font-size:108%;}
+			article h3				{font-size:93%;}
+			article code			{margin:0 18px 18px 18px; white-space: pre; overflow: auto; display: block; padding:18px; line-height:20px; background:#2e2e2e; color:#fff; font-size:85%; font-family:Monaco, Courier, monospace;}
+			
+
+
+	/* Messages (Messages that the app sends to the user - icnrect pass etc) */
+	/* Generic Styles first (Styles that affect all messages: error, warning, generic + success) */
+		div.message							{margin-bottom:16px;}
+		div.message div.top					{height:4px; overflow:hideen; margin-right:10px;}
+		div.message div.top img.right		{float:right; width:10px; height:4px; position:relative; right:-10px;}
+		div.message h6						{height:23px; margin:0; padding:4px 9px 0 9px; font-size:93%; font-weight:normal;}
+		div.message h6 img.message-icon		{float:left; width:24px; height:15px;}
+		
+		div.message h6 span					{float:left; color:#fff;}
+		div.message h6 img.message-close	{float:right; width:45px; height:20px; position:relative; top:-2px;}		
+		
+		div.message div.msg-content			{background:#fff; padding:10px 0 0 0; border-left:2px solid; border-right:2px solid; font-size:85%; line-height:18px;}		
+		div.message div.msg-content p		{padding:0 10px;}
+		
+		div.message div.bottom				{height:8px; margin-right:10px;}
+		div.message div.bottom img.right	{float:right; width:10px; height:8px; position:relative; right:-10px;}
+		
+		div.message ul		{padding: 10px 0 8px 0;}
+		div.message li		{padding: 0 0 2px 26px; margin:0; list-style-type:none;}
+		
+	/* Error Message */
+		div.error-msg  div.top,
+		div.error-msg  div.top img.right,
+		div.error-msg  div.bottom,
+		div.error-msg  div.bottom img.right,
+		div.error-msg  h6,
+		/* div.error-msg  h6 img.message-icon, */	/*Left here just incase, is in the markup */
+		div.error-msg  h6 img.message-close		{background:url(../images/messages/bg-msg-error.png) no-repeat;}
+		
+		div.error-msg  h6						{background-position:-2px -4px; color:#fff;}
+		div.error-msg  h6 img.message-close		{background-position:-1146px -5px;}
+		div.error-msg  div.top					{background-position:left top;}
+		div.error-msg  div.top img.right		{background-position:right top;}
+		div.error-msg  div.bottom				{background-position:left bottom;}
+		div.error-msg  div.bottom img.right		{background-position:right bottom;}
+		
+		div.error-msg div.msg-content			{border-color:#6f0203; color:#9e0b0f;}		
+		div.error-msg div.msg-content p,
+		div.error-msg div.msg-content ul		{color:#9e0b0f;}
+		div.error-msg div.msg-content li		{background-position:15px -94px;}
+		
+		div.error-msg a,
+		div.error-msg a:link,
+		div.error-msg a:visited					{color:#5f0103;}
+		div.error-msg a:hover					{color:#000;}
+		div.error-msg a:active					{color:#5f0103;}
+		
+	/* Warning Message */		
+		div.warning-msg div.top,
+		div.warning-msg  div.top img.right,
+		div.warning-msg  div.bottom,
+		div.warning-msg  div.bottom img.right,
+		div.warning-msg  h6,
+		/* div.warning-msg  h6 img.message-icon, */ /*Left here just incase, is in the markup */
+		div.warning-msg  h6 img.message-close	{background:url(../images/messages/bg-msg-warning.png) no-repeat;}
+		
+		div.warning-msg  h6						{background-position:-2px -4px; color:#333131;}
+		div.warning-msg  h6 img.message-close	{background-position:-1146px -5px;}
+		div.warning-msg  div.top				{background-position:left top;}
+		div.warning-msg  div.top img.right		{background-position:right top;}
+		div.warning-msg  div.bottom				{background-position:left bottom;}
+		div.warning-msg  div.bottom img.right	{background-position:right bottom;}
+		
+		div.warning-msg div.msg-content			{border-color:#6f0203; color:#9e0b0f;}
+		div.warning-msg div.msg-content p,
+		div.warning-msg div.msg-content ul		{color:#9e0b0f;}
+		div.warning-msg div.msg-content li		{background-position:15px -94px;}
+		
+		div.warning-msg a,
+		div.warning-msg a:link,
+		div.warning-msg a:visited				{color:#5f0103; border:none;}
+		div.warning-msg a:hover					{color:#000;}
+		div.warning-msg a:active				{color:#5f0103;}
+		
+	/* Generic Message */
+		div.generic-msg  div.top,
+		div.generic-msg  div.top img.right,
+		div.generic-msg  div.bottom,
+		div.generic-msg  div.bottom img.right,
+		div.generic-msg  h6,
+		/* div.success-msg  h6 img.message-icon, */ /*Left here just incase, is in the markup */
+		div.generic-msg  h6 img.message-close	{background:url(../images/messages/bg-msg-generic.png) no-repeat;}
+
+		div.generic-msg  h6						{background-position:-2px -4px; color:#fff;}
+		div.generic-msg  h6 img.message-close	{background-position:-1146px -5px;}
+		div.generic-msg  div.top				{background-position:left top;}
+		div.generic-msg  div.top img.right		{background-position:right top;}
+		div.generic-msg  div.bottom				{background-position:left bottom;}
+		div.generic-msg  div.bottom img.right	{background-position:right bottom;}
+		
+		div.generic-msg div.msg-content			{border-color:#ff9000; color:#ff9000;}
+		div.generic-msg div.msg-content	p,
+		div.generic-msg div.msg-content	ul		{color:#ff9000;}
+		div.generic-msg div.msg-content li		{background-position:15px -194px;}
+		
+		div.generic-msg a,
+		div.generic-msg a:link,
+		div.generic-msg a:visited				{color:#d74700; border:none;}
+		div.generic-msg a:hover					{color:#333;}
+		div.generic-msg a:active				{color:#d74700;}		
+		
+	/* Sucess Message */
+		div.success-msg  div.top,
+		div.success-msg  div.top img.right,
+		div.success-msg  div.bottom,
+		div.success-msg  div.bottom img.right,
+		div.success-msg  h6,
+		/* div.success-msg  h6 img.message-icon, */ /*Left here just incase, is in the markup */
+		div.success-msg  h6 img.message-close	{background:url(../images/messages/bg-msg-success.png) no-repeat;}
+
+		div.success-msg  h6						{background-position:-2px -4px; color:#fff;}
+		div.success-msg  h6 img.message-close	{background-position:-1146px -5px;}
+		div.success-msg  div.top				{background-position:left top;}
+		div.success-msg  div.top img.right		{background-position:right top;}
+		div.success-msg  div.bottom				{background-position:left bottom;}
+		div.success-msg  div.bottom img.right	{background-position:right bottom;}
+		
+		div.success-msg div.msg-content			{border-color:#a0d734; color:#78b300;}
+		div.success-msg div.msg-content	p,
+		div.success-msg div.msg-content	ul		{color:#78b300;}
+		div.success-msg div.msg-content li		{background-position:15px -294px;}
+		
+		div.success-msg a,
+		div.success-msg a:link,
+		div.success-msg a:visited				{color:#4d7301; border:none;}
+		div.success-msg a:hover					{color:#333;}
+		div.success-msg a:active				{color:#4d7301;}
+
+	
+
+		
+	
+	
+	
+	/* Boxes */
+		.box		{background:#2e2e2e; position:relative;}
+	
+		/* The Borders */
+			.box .outer-top,
+			.box .outer-bottom,
+			.box .inner-top,
+			.box .inner-bottom,
+			.box .inner-top .right,
+			.box .outer-top .right,
+			.box .inner-bottom .right,
+			.box .outer-bottom .right	{display:block; height:5px; overflow:hidden;}
+			
+			.box section.footer						{display:block; height:30px; padding:0 12px; line-height:33px;}
+			.box section.footer .btn-dark-lrg		{margin-top:6px; float:right; position:relative; right:-4px;}
+			
+		/* Its title */
+			.box h1		{height:31px; line-height:24px; padding:0 12px; margin:0; font-weight:normal; color:#fff; font-size:123.1%; }
+			
+		/* Dark Box (default) - Its borders */			
+			.outer-top				{background-position: 0 -100px;}
+			.outer-top .right		{width:5px; float:right; background-position: right -100px;}
+			
+			.inner-top				{background-position: 0 -105px;}
+			.inner-top .right		{width:12px; float:right; background-position: right -105px;}
+			
+			.inner-bottom			{background-position: 0 -110px;}
+			.inner-bottom .right	{width:12px; float:right; background-position: right -110px;}
+			
+			.outer-bottom			{background-position: 0 -115px;}
+			.outer-bottom .right	{width:12px; float:right; background-position: right -115px;}
+			
+			/* Dark Box - its content */
+				.content			{display:block; min-height:20px; background:#fff; padding:18px 16px; border-left:8px solid #2d2e2e; border-right:8px solid #2d2e2e;}
+				.content-list		{padding:3px 8px;}
+				
+		/* Light Box */
+			.box-light							{background:#eaeaea;}
+			
+				/* Light Box - its borders */
+				.box-light .outer-top			{background-position: 0 -129px;}
+				.box-light .outer-top .right	{width:5px; float:right; background-position: right -129px;}
+				
+				.box-light .inner-top			{background-position: 0 -134px;}
+				.box-light .inner-top .right	{width:12px; float:right; background-position: right -134px;}
+				
+				.box-light .inner-bottom		{background-position: 0 -139px;}
+				.box-light .inner-bottom .right	{width:12px; float:right; background-position: right -139px;}
+				
+				.box-light .outer-bottom		{background-position: 0 -144px;}
+				.box-light .outer-bottom .right	{width:14px; float:right; background-position: right -144px;}
+				
+				/* Its title */
+					.box-light h1				{color:#2e2e2e;}
+				
+				/* Dark Box - its content */
+					.box-light .content			{min-height:20px; background:#fff; border-left:8px solid #eaeaea; border-right:8px solid #eaeaea;}
+			
+
+					 
+					 
+		/* Light Grey Help Box */
+			.help							{background:#eaeaea;}
+			.help-content					{padding:10px 13px; font-size:85%; line-height:15px;}
+				.help-content strong		{font-weight:normal;}
+			
+			.help .help-top					{display:block; height:10px; background-position:0 -249px;}
+			.help .help-top .help-R			{float:right; display:block; width:4px; height:10px; background-position:right -249px;}
+			.help .help-bottom .help-R		{float:right; display:block; width:4px; height:4px; background-position:right -264px;}
+			.help .help-bottom				{display:block; height:4px; background-position:0 -264px;}	
+			
+			
+		/* Upload box */
+			.upload-msg						{display:block; margin:6px 0 20px 0;}
+			.upload-msg .content			{margin:0; height:21px; padding:3px 10px 0 40px; border:none; color:#fff; background:#ff9000; position:relative; }
+			.upload-msg .content .icon		{display:block; width:22px; height:22px; position:absolute; left:10px; top:1px; background-position:-9px -461px;}
+			
+			.upload-msg	.top,
+			.upload-msg	.top .tr,
+			.upload-msg	.bottom,
+			.upload-msg	.bottom .br			{position:relative; display:block; height:5px;}
+			
+			.upload-msg	.top				{background-position:0 -456px;}
+			.upload-msg	.top .tr			{width:6px; position:absolute; right:0; background-position:right -456px;}
+			.upload-msg	.bottom				{background-position:0 -483px;}
+			.upload-msg	.bottom .br			{width:6px; position:absolute; right:0; background-position:right -483px;}
+			
+	
+	
+	
+	
+	
+	
+	/* Lists */	
+	
+		/* Items per page (Show, 10, 20, 50... etc items per page.)*/	
+			dl.items-per-page		{float:none; position:absolute; right:9px; top:8px; width:auto; margin:0; padding:0;}
+			dl.items-per-page dt	{float:left; width:auto; clear:none; margin:0; padding:2px 7px; color:#9b8f8f; font-size:85%;}
+			dl.items-per-page dd	{float:left; width:auto; clear:none; margin:0; padding:0;}
+			dl.items-per-page ul	{margin:0; padding:0;}
+			dl.items-per-page li	{display:inline; margin:0; padding:0;}
+			
+		/* Item Options (Edit, delete, move up + move down etc) */
+			ul.item-options			{float:left; margin:0; padding:0;}
+			ul.item-options li		{float:left; padding:0 10px 0 0; margin:0; list-style-type:none;}
+			
+		/* Files list */
+			.files-list ul				{margin:0 0 10px 0; padding:0; border-top:1px solid #dedede; font-size:93%;}
+			.files-list ul li			{display:block; margin:0; padding:0 10px; min-height:28px; line-height:28px; position:relative; list-style-type:none; border-bottom:1px solid #dedede;}
+			.files-list li.active		{background:#eaeaea;}
+			.files-list ul li a,
+			.files-list ul li a:link,
+			.files-list ul li a:visited,
+			.files-list ul li a:hover,
+			.files-list ul li a:focus,
+			.files-list ul li a:active		{border:none;}
+			.files-list ul li a.movie-clip	{float:left; max-width:136px; overflow:hidden; background-position:0 -1132px;}
+			.files-list ul li a.remove		{position:absolute; top:6px; right:9px;}
+			.files-list a.default-add		{margin-bottom:4px;}
+			
+			/* A Disabled File List (inherits from Files List)*/
+			.files-list-disabled ul,
+			.files-list-disabled ul li				{border-color:#f5f5f5;}
+			.files-list-disabled ul li.active		{background:none;}
+			
+			.files-list-disabled ul li a,
+			.files-list-disabled ul li a:link,
+			.files-list-disabled ul li a:visited,
+			.files-list-disabled ul li a:hover,
+			.files-list-disabled ul li a:focus,
+			.files-list-disabled ul li a:active		{color:#c8c8c8; cursor:pointer cursor:default;}
+			.files-list-disabled ul li a.movie-clip	{background-position:0 -1162px; cursor:default;}
+			.files-list-disabled ul li a.remove		{background-position:0 -1215px; cursor:default;}
+			.files-list a.default-add span			{color:#c8c8c8; background-position:left -468px; cursor:default;}
+			.files-list a.default-add i				{background-position:right -468px; cursor:default;}
+	
+	
+	
+	/* Tables */
+	
+		/* Items List (A List of items in tabular format) */
+			.table-list						{margin:0; border:none; width:100%; margin-bottom:14px;}
+			
+			/* Headings */			
+				.table-list	th					{height:28px; padding:0; margin:0; color:#fff; font-size:93%; line-height:20px; font-weight:bold; vertical-align:top; background: #2e2e2e url(../images/bg_content/bg-th-lists.png) center bottom;}
+						
+				.table-list	th.first			{background-position: left bottom; padding-left:4px; position:relative; }
+				.table-list	th.last				{background-position: right bottom; padding-right:4px; position:relative;}
+				
+				.table-list	th.first .th-tl,
+				.table-list th.last .th-tr		{display:block; position:relative; width:4px; height:4px; background: url(../images/bg_content/bg-th-lists.png);}
+				.table-list th.first .th-tl		{float:left; top:0; left:-4px; background-position:top left;}
+				.table-list th.last .th-tr		{float:right; top:0; right:-4px; background-position:top right;}
+			
+				.table-list	th a,
+				.table-list	th a:link,
+				.table-list	th a:visited,
+				.table-list	th a:hover,
+				.table-list	th a:focus,
+				.table-list	th a:active			{color:#fff; border:none;}
+				
+				.table-list	th a.order					{padding-right:12px;}
+				
+				.table-list	th a.order-down				{background-position: right -973px;}
+				.table-list	th a.order-up				{background-position: right -1013px;}
+				.table-list	th a.order-down-active		{background-position: right -1093px;}
+				.table-list	th a.order-up-active		{background-position: right -1053px;}
+				
+				/* Sub Headings */
+					.table-list	.subheading th			{background:#fff; font-size:85%; color:#000; padding: 6px 0 0 12px; font-weight:bold;}
+				
+				
+			/* Rows */
+				tr.even td				{background:#eaeaea;}
+				tr.highlight td			{background:#cfcfcf;}
+			
+				
+			/* TD's */
+				.table-list td.first		{padding-left:8px;}
+				.table-list td.last			{}
+				.table-list td .checkbox	{font-size:97%} /* For Safari only - It changes the size of checkboxes to match its font */				
+				.table-list td				{padding:3px 0 4px 0; vertical-align:middle; font-size:85%; color:#3c3c3c;}				
+				.table-list td.quiet		{color:#999;}
+				
+			/* When the tables has thumbs (extends .table-list) */			
+				.table-list-thumbs th				{}
+				.table-list-thumbs td				{vertical-align:top; padding:8px 0 5px 0; }
+				.table-list-thumbs td .checkbox		{float:left; position:relative; top:-4px; margin-right:12px; }
+	
+
+			
+			
+
+		
+			
+			
+			
+	
+
+			
+		
+		
+		
+	
+
+
+
+		
+		
+	/* Thumbnails */
+		
+
+	
+	
+	
+	
+/* @end */
+
+
+
+
+
+/* @group 3. Specific Styles (Appears in just one page type) */
+			
+
+	
+		
+
+
+
+			
+
+/* @end */

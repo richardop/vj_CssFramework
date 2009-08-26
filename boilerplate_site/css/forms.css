@@ -1,0 +1,67 @@
+/************************************************
+
+FILE:		  	forms.css
+DESCRIPTION:  	Styles for forms
+
+************************************************/
+
+/* @group 1. Generic Elements */
+
+	/* Basic Elements */
+		form					{}
+		fieldset				{}
+		form dl					{}
+		form dt					{width:140px; padding:0; margin-bottom:8px;}
+		form dd					{width:300px; padding:0; margin-bottom:8px;}
+		form label				{}
+		form dd label			{}
+		legend					{}
+		legend span				{}
+		legend a 				{}	
+	
+	/* Elements that need classes */
+		.textfield,			
+		.textarea				{width:300px;}
+		.textarea				{}
+		.radio,				
+		.checkbox				{margin-right:15px;}
+		.select					{}
+		.actions				{}
+		.actions				{clear:left;}
+		
+		
+		
+		
+/* @group 2. Reusable Elements */		
+		
+	/* Fancy Forms - Forms with legends + curved borders that can be placed wherever */	
+		form.frm-styled							{margin-top:-10px;}
+		
+			/* Outer Elements (decoration)*/
+			form.frm-styled	legend span			{position:relative; bottom:-10px; margin:0 10px; padding:0 10px; background:#ccc;}
+
+			form.frm-styled div.top,
+			form.frm-styled div.tr,
+			form.frm-styled div.bottom,
+			form.frm-styled div.br				{background:url(../img/bg_content/bg-form.png) left top no-repeat;}
+
+			form.frm-styled div.top				{height:10px; margin-right:10px; background-position: left -10px;}
+			form.frm-styled div.tr				{float:right; width:10px; height:10px; position:relative; top:0; right:-10px; margin:0; background-position: right -10px;}
+
+			form.frm-styled div.frm-content		{border-left:1px solid #515151; border-right:1px solid #515151;}
+
+			form.frm-styled div.bottom			{height:10px; margin-right:10px; background-position: left bottom; clear:both;}	
+			form.frm-styled div.br				{float:right; display:block; width:10px; height:10px; position:relative; top:0; right:-10px; margin:0; background-position:right bottom;}
+			
+			/*Inner Elements (Content) */
+			form.frm-styled dt					{padding-left: 19px;}
+			form.frm-styled dd					{padding-right: 30px;}			
+			form.frm-styled .actions			{padding-left: 160px;}
+			
+			
+/* Forms Based on their Columns */
+
+
+
+
+

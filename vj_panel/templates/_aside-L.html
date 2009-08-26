@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link href="../stylesheets/reset.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/layout.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/content.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/navigation.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/forms.css" rel="stylesheet" type="text/css" />
+
+	<!--[if lte IE 7]><link href="../stylesheets/fix_ie7.css" rel="stylesheet" type="text/css"/><![endif]-->
+	<!--[if lt IE 7]><link href="../stylesheets/fix_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->	
+	<link href="../stylesheets/fix_print.css" rel="stylesheet" type="text/css" media="print" />
+	
+	<script src='../javascripts/jquery-1.3.2.min.js' type="text/javascript"></script>
+	<script src='../javascripts/jquery.easing.js' type="text/javascript"></script>
+	<script src='../javascripts/application.js' type="text/javascript"></script>
+
+	<title>VJ Admin UI - Aside on the left</title>	
+	
+	<!--[if IE]><script src="../javascripts/html5.js" type="text/javascript"></script><![endif]-->
+	
+</head>
+
+<body>
+	<header>
+		<span class="container">
+			<a href="#" title="Return to the VideoJuicer Homepage" id="logo">VideoJuicer</a>		
+			<nav id="head">
+				<a href="#" title="Logout" class="btn btn-dark-bar dark-bar-L">Logout</a>
+				<a href="#" title="Visit the Developer Centre" class="btn btn-dark-bar dark-bar-M">Developer Centre</a>
+				<a href="#" title="Visit the Help Centre" class="btn btn-dark-bar dark-bar-R">Help Centre</a>
+			</nav>
+		</span>
+	</header>
+	
+	<!-- End <header> -->
+	
+	<nav id="main">
+		<a href="#" title="View &amp; manage your Seeds" class="active">Seeds</a>
+		<a href="#" title="View &amp; manage your Users">Users</a>
+		<a href="#" title="View &amp; manage your Movies">Movies</a>
+		<a href="#" title="View &amp; manage your Promo's">Promos</a>
+		<a href="#" title="View &amp; manage your Campaigns">Campaigns</a>
+	</nav>
+	
+	<!-- End <nav #main> -->
+	
+	<nav id="toolbar">	
+	
+		<ul class="ul-select clearfix">
+			<li><a href="#" title="" class="btn btn-default">Standard Button (Default)</a>
+			<li><a href="#" title="" class="btn btn-default default-selected">Standard Button (Selected)</a>
+			<li><a href="#" title="" class="btn btn-default default-disabled">Standard Button (Disabled)</a>
+			<li>
+				<a href="#" title="" class="btn btn-bar bar-L">Multiple</a>
+				<a href="#" title="" class="btn btn-bar bar-M">Button</a>
+				<a href="#" title="" class="btn btn-bar bar-R">Default</a>
+			</li>
+			<li>
+				<a href="#" title="" class="btn btn-bar bar-selected-L">Multiple</a>
+				<a href="#" title="" class="btn btn-bar bar-selected-M">Button</a>
+				<a href="#" title="" class="btn btn-bar bar-selected-R">Selected</a>
+			</li>
+			<li class="closed">
+				<a href="#" title="" class="btn btn-select">Drop Down</a>
+				<div class="wrapper">
+					<span class="top"><span class="tr"></span></span>
+					<div class="children clearfix">
+						<span class="t"><span class="tr"></span></span>
+						<div class="select-content clearfix">
+							<ul>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li class="selected"><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum lorem</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+							</ul>										
+						</div>
+						<span class="b"><span class="br"></span></span>
+					</div>
+				</div>
+			</li>
+			<li class="open">
+				<a href="#" title="" class="btn btn-select-active">Drop Down (clicked)</a>
+				<div class="wrapper clearfix">
+					<span class="outer-top"><span class="right"></span></span>
+					<div class="children clearfix">
+						<span class="t"><span class="tr"></span></span>
+						<div class="select-content clearfix">
+							<ul>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li class="selected"><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum lorem</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+								<li><a href="#" title="">Lorem ipsum dipsum</a></li>
+							</ul>										
+						</div>
+						<span class="b"><span class="br"></span></span>
+					</div>
+				</div>
+			</li>
+		</ul>			
+		
+	</nav>
+	
+	<!-- End <nav #toolbar> -->
+	
+<!-- END LAYOUT ( The Header, includes: <header>, <nav #main>, <nav #toolbar> )-->	
+<!-- START LAYOUT ( <section #template>, Where all the content goes ) -->
+	
+	<section id="template" class="aside-L clearfix">	
+		<div class="container clearfix">
+		
+		
+			<section id="content">
+			
+			<!-- START a box (This one is the default dark colours) -->			
+				<div class="box">
+					<div class="outer-top"><div class="right"></div></div>						
+						<h1>Page Title</h1>
+					
+					<div class="inner-top"><div class="right"></div></div>		
+					<div class="content">
+					
+						Content
+						
+					</div>
+					<div class="inner-bottom"><div class="right"></div></div>
+									
+					<section class="footer">
+					
+						Export
+					
+					</section>	
+					
+					<div class="outer-bottom"><div class="right"></div></div>			
+				</div>				
+			<!-- END The Dark Box -->			
+				
+			</section>				
+
+<!-- END LAYOUT ( <section #content>, the wide column ) -->
+<!-- START LAYOUT ( <aside>, the narrow column ) -->	
+			
+			<aside class="box box-light">
+				<div class="outer-top"><div class="right"></div></div>	
+					<h1>Aside Title</h1>
+				
+				<div class="inner-top"><div class="right"></div></div>
+				<div class="content">
+				
+						
+					
+						
+				</div>
+				<div class="inner-bottom"><div class="right"></div></div>
+				
+				<section class="footer">
+				
+				</section>
+				
+				<div class="outer-bottom"><div class="right"></div></div>							
+			</aside>			
+			
+	<!-- END ( <aside>, the narrow column ) -->
+			
+		</div>
+		
+	<!-- END The Container (Sets the width of the page) -->
+	</section>
+
+<!-- END LAYOUT ( <section #template>, All content ends by here ) -->
+<!-- START LAYOUT ( <footer>, the footer ) -->	
+	
+	<footer>
+		<div id="copyright"><span class="container"><small>&copy; Videojuicer 2009, All rights Reserved</small></span></div>
+	<!-- END The Copyright Info -->
+		
+		<section id="info">
+			<h1>Information Centre</h1>
+			<p>Find Out what's Happeneing at Videojuicer...</p>
+			
+			<ul>
+				<li><a href="#" title="">Product updates &amp latest release information</a></li>
+				<li><a href="#" title="">New features and walk-throughs</a></li>
+				<li><a href="#" title="">Future platform roadmap</a></li>
+				<li><a href="#" title="">Videojuicer developer blog</a></li>
+				<li><a href="#" title="">Careers at Videojuicer</a></li>
+				<li><a href="#" title="">Frequently Asked Questions</a></li>
+			</ul>		
+		</section>
+		
+	<!-- END The Information Centre -->
+		
+		<section id="develop">
+			<h1>Developer Centre</h1>
+			<p>Videojuicer integration resource for developers...</p>
+			
+			<ul>
+				<li><a href="#" title="">Videojuicer API Overview</a></li>
+				<li><a href="#" title="">Getting started with the Videojuicer API</a></li>
+				<li><a href="#" title="">Videojuicer Core SDK Download</a></li>
+				<li><a href="#" title="">Videojuicer Player SDK Download</a></li>
+				<li><a href="#" title="">API Documentation &amp; Method Reference</a></li>
+				<li><a href="#" title="">Frequently Asked Questions</a></li>
+			</ul>		
+		</section>
+		
+	<!-- END The Developer Centre -->
+	
+		<section id="help">
+			<h1>Help Centre</h1>
+			<form method="" action="" class="frm-srch">
+				<fieldset>
+					<legend class="hide">Search The Help Centre</legend>
+					<label class="hide" for="srch-footer">Search:</label>
+					<input type="text" class="textfield textfield-dark" value="Search Help Centre"/>
+					<button type="submit" title="Search the help Centre">Submit</button>
+				</fieldset>			
+			</form>
+			
+			<ul>
+				<li><a href="#" title="">Videojuicer API Overview</a></li>
+				<li><a href="#" title="">Getting started with the Videojuicer API</a></li>
+				<li><a href="#" title="">Videojuicer Core SDK Download</a></li>
+				<li><a href="#" title="">Videojuicer Player SDK Download</a></li>
+				<li><a href="#" title="">API Documentation &amp; Method Reference</a></li>
+				<li><a href="#" title="">Frequently Asked Questions</a></li>
+			</ul>		
+		</section>
+	
+	<!-- END The Help Centre -->
+	
+	</footer>
+	
+<!-- END The page -->
+
+</body>
+</html>

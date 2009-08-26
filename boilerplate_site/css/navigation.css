@@ -1,0 +1,160 @@
+/************************************************
+
+FILE:		  	navigation.css
+DESCRIPTION:  	File Defines Navigation eleements (May be some cross over in layout for main and top nav)
+
+************************************************/
+
+/* @group 1.Generic navigation */
+	a,
+	a:link,
+	a:visited 	{color: #009fca; text-decoration:none;}
+	a:hover 	{color: #017ea0;}
+	a:focus		{color: #017ea0;}
+	a:active 	{color: #009fca;}
+
+	strong a,
+	strong a:link,
+	strong a:visited 	{color: #009fca;}
+	strong a:hover 		{color: #017ea0;}
+	strong a:focus		{color: #017ea0;}
+	strong a:active 	{color: #009fca;}
+
+/* @end */
+
+	
+/* @group 2.Layout */
+
+		
+	/* J Scroll Nav (Replaces the standard OS scroll bar with a cool JQuery one) */
+		div.jScrollPaneContainer		{position:relative; overflow:hidden;}
+		div.jScrollPaneTrack			{width:14px; height:195px; background:#d8d8d8; float:right;} 	/* The Background */
+			div.jScrollPaneDrag			{position:relative; width:14px; height:199px; background:#211e1e;}	/* The Scroller (the bit you drag) */
+			div.jScrollPaneDrag:hover	{cursor:pointer;}
+			
+	/* Horizontal Sliding Nav (The sliding bar at the top - see Metropolis.tv) */
+		ul.nav-horizontal-slide					{float:left; margin:0 0 20px; padding:0; clear:both;}
+		ul.nav-horizontal-slide li				{float:left; margin:0 5px 0 0; padding:0; list-style-type:none;}
+		ul.nav-horizontal-slide li a			{float:left; display:block; height:20px; line-height:20px; padding:0 10px; margin:0 5px; background:#E0E0E0;}
+
+		/* Next + Previous Buttons */
+			ul.nav-horizontal-slide li a.previous,
+			ul.nav-horizontal-slide li a.next			{height:20px; padding:0;}	
+					
+			li.disabled a.next:hover img,	
+			li.disabled a.previous:hover img			{cursor:default;}	
+			
+			li.active a									{background:#ccc; color:#333;}
+			
+			ul.nav-horizontal-slide a.previous img,	
+			ul.nav-horizontal-slide a.next img			{float:left; width:20px; height:20px; background:#e4e4e4 url(../img/nav/arrows.png) right top no-repeat; }
+
+			li.disabled a.next img						{background-position:bottom right;}
+			li.disabled a.previous img					{background-position:bottom left;}
+			
+			/* Setup for With  + Without JS */
+				li a.next,		
+				li a.previous							{display:none;}
+				
+				.has-js li a.next,		
+				.has-js li a.previous					{display:block;} 		
+			
+	/* Horizontal Sliding Nav (The sliding div - see OCA) */	
+		div.viewport-outer a.previous			{float:left; margin-top:28px;}
+		div.viewport-outer a.previous img		{width:20px; height:20px; background:black;}
+		div.viewport-outer a.next				{float:left; margin-top:28px;}
+		div.viewport-outer a.next img			{width:20px; height:20px; background:black;}
+
+						
+		
+		
+/* @end */
+	
+
+
+
+
+
+/* @group 3.Navigation within Content */
+
+	/*Tabbed Nav */
+		ul.nav-tabbed 						{height:20px; margin:0 0 0 0; padding:0 5px; font-weight:bold;}
+		ul.nav-tabbed li					{float:left; list-style-type:none;}
+		ul.nav-tabbed li a					{float:left; display:block; padding:0 10px; margin:0 5px; height:20px; line-height:21px; padding:0 10px; color:#333; text-transform:uppercase; background:#d3d3d3;}
+		ul.nav-tabbed li a.active			{background:#ccc;}
+
+		ul.nav-tabbed li a,
+		ul.nav-tabbed li a:link,
+		ul.nav-tabbed li a:visited			{color:#3d3d3d;}
+		ul.nav-tabbed li a:hover			{color:#888;}
+		ul.nav-tabbed li a:focus			{color:#888;}
+		ul.nav-tabbed li a:active			{color:#3d3d3d;}
+
+		ul.nav-tabbed li.active a,
+		ul.nav-tabbed li.active a:link,
+		ul.nav-tabbed li.active a:visited	{background:#000; color:#fff;}
+		ul.nav-tabbed li.active a:hover		{color:#ccc;}
+		ul.nav-tabbed li.active a:focus		{color:#ccc;}
+		ul.nav-tabbed li.active a:active	{color:#fff;}		
+	
+	/* Messages Nav */
+		div.error-msg a				{color:#6E070C;}
+		div.error-msg a:link		{color:#6E070C;}
+		div.error-msg a:visited		{color:#6E070C;}
+		div.error-msg a:hover		{color:#333;}
+		div.error-msg a:active		{color:#6E070C;}
+		
+		div.success-msg a			{color:#6D8906;}
+		div.success-msg a:link		{color:#6D8906;}
+		div.success-msg a:visited	{color:#6D8906;}
+		div.success-msg a:hover		{color:#333;}
+		div.success-msg a:active	{color:#6D8906;}
+		
+		div.warning-msg a			{color:#2D3137;}
+		div.warning-msg a:link		{color:#2D3137;}
+		div.warning-msg a:visited	{color:#2D3137;}
+		div.warning-msg a:hover		{color:#000;}
+		div.warning-msg a:active	{color:#2D3137;}		
+	
+	/* Pagination */
+		ul.pag					{float:right; width:100%; height:26px; margin:0 0 0 0; padding:0; line-height:24px; text-align:right; font-size:85%; border-top:1px solid #d2d2d2;}
+		ul.pag li 				{display:inline; margin:0 0 0 16px; list-style-type:none;}
+		ul.pag li.floatL		{display:block; float:left; margin: 0; color:#c3c3c3;}
+
+		ul.pag-bottom			{border:none; border-bottom:1px solid #d2d2d2; margin-bottom:34px;}		
+	
+	/* Icon Nav (Links with icons in the BG ) */
+		
+
+
+
+
+	/* Thumbnails */
+
+	
+
+	
+	
+	/* Buttons */
+		.btn			{display:inline; padding:0; margin:0; font-weight:normal; background:none; border:none;}	
+		.btn span		{float:left; width:auto; height:18px; line-height:18px; margin:0; padding:0 0 0 9px;}
+		.btn i			{float:left; width:9px; height:18px; font-weight:normal; }
+		
+		.btn, 
+		.btn:link, 
+		.btn:visited, 
+		.btn:hover, 
+		.btn:active,
+		.btn:hover, 
+		button:hover				{cursor:pointer;}	
+	
+		button::-moz-focus-inner 	{padding:0; border:none}	
+	
+		.btn span,		
+		.btn i						{background:url(../img/common/buttons/bg-buttons.png);}
+		
+		/* Specific Styles (Default)*/			
+			.btn-default			{font-size:73%;}
+			.btn-default span		{height:15px; line-height:15px; color:#fff; background-position:left -20px;}
+			.btn-default i			{width:9px; height:15px; background-position:right -20px;}
+			
